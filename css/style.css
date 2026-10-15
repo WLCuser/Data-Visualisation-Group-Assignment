@@ -1,0 +1,36 @@
+body{
+    margin:0;
+}
+
+nav{
+    background-color: lightblue;
+    text-align: center;
+    padding: 24px 24px;
+}
+
+nav a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 20px;
+    margin: 0 12px;
+}
+
+nav a:hover{
+    color:grey;
+}
+
+nav a.active{
+    color:black;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 80%;
+}
+
+.container div{
+    border: 1px solid black;
+}
