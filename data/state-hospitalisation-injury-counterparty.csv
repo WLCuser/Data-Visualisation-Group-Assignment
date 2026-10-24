@@ -1,0 +1,705 @@
+"calendar year","6-monthly","cause of injury = traffic","state or territory","counterparty","count of cases excluding died in hospitals within 30 days","bed days excluding died in hospitals within 30 days"
+"2011","Jan-Jun","Traffic","NSW","Car, pick-up truck or van",2286,11698
+"2011","Jan-Jun","Traffic","NSW","Fixed or stationary object",760,4941
+"2011","Jan-Jun","Traffic","NSW","Non-collision transport accident",1167,4548
+"2011","Jan-Jun","Traffic","NSW","Other",1010,4902
+"2011","Jan-Jun","Traffic","Vic","Car, pick-up truck or van",2122,8165
+"2011","Jan-Jun","Traffic","Vic","Fixed or stationary object",689,2920
+"2011","Jan-Jun","Traffic","Vic","Non-collision transport accident",994,2773
+"2011","Jan-Jun","Traffic","Vic","Other",780,2841
+"2011","Jan-Jun","Traffic","Qld","Car, pick-up truck or van",1025,5394
+"2011","Jan-Jun","Traffic","Qld","Fixed or stationary object",412,2949
+"2011","Jan-Jun","Traffic","Qld","Non-collision transport accident",888,3084
+"2011","Jan-Jun","Traffic","Qld","Other",692,2540
+"2011","Jan-Jun","Traffic","WA","Car, pick-up truck or van",661,4126
+"2011","Jan-Jun","Traffic","WA","Fixed or stationary object",239,1307
+"2011","Jan-Jun","Traffic","WA","Non-collision transport accident",500,2331
+"2011","Jan-Jun","Traffic","WA","Other",324,1620
+"2011","Jan-Jun","Traffic","SA","Car, pick-up truck or van",477,2982
+"2011","Jan-Jun","Traffic","SA","Fixed or stationary object",190,1270
+"2011","Jan-Jun","Traffic","SA","Non-collision transport accident",323,1212
+"2011","Jan-Jun","Traffic","SA","Other",157,982
+"2011","Jan-Jun","Traffic","Tas","Car, pick-up truck or van",98,625
+"2011","Jan-Jun","Traffic","Tas","Fixed or stationary object",35,255
+"2011","Jan-Jun","Traffic","Tas","Non-collision transport accident",68,300
+"2011","Jan-Jun","Traffic","Tas","Other",46,180
+"2011","Jan-Jun","Traffic","ACT","Car, pick-up truck or van",93,596
+"2011","Jan-Jun","Traffic","ACT","Fixed or stationary object",34,326
+"2011","Jan-Jun","Traffic","ACT","Non-collision transport accident",97,319
+"2011","Jan-Jun","Traffic","ACT","Other",59,221
+"2011","Jan-Jun","Traffic","NT","Car, pick-up truck or van",58,589
+"2011","Jan-Jun","Traffic","NT","Fixed or stationary object",22,169
+"2011","Jan-Jun","Traffic","NT","Non-collision transport accident",83,622
+"2011","Jan-Jun","Traffic","NT","Other",50,432
+"2011","Jul-Dec","Traffic","NSW","Car, pick-up truck or van",2393,11491
+"2011","Jul-Dec","Traffic","NSW","Fixed or stationary object",783,4289
+"2011","Jul-Dec","Traffic","NSW","Non-collision transport accident",1182,4257
+"2011","Jul-Dec","Traffic","NSW","Other",1037,4218
+"2011","Jul-Dec","Traffic","Vic","Car, pick-up truck or van",2186,8220
+"2011","Jul-Dec","Traffic","Vic","Fixed or stationary object",718,2861
+"2011","Jul-Dec","Traffic","Vic","Non-collision transport accident",981,2856
+"2011","Jul-Dec","Traffic","Vic","Other",856,3288
+"2011","Jul-Dec","Traffic","Qld","Car, pick-up truck or van",1088,5356
+"2011","Jul-Dec","Traffic","Qld","Fixed or stationary object",389,2583
+"2011","Jul-Dec","Traffic","Qld","Non-collision transport accident",1081,3729
+"2011","Jul-Dec","Traffic","Qld","Other",747,2898
+"2011","Jul-Dec","Traffic","WA","Car, pick-up truck or van",648,3754
+"2011","Jul-Dec","Traffic","WA","Fixed or stationary object",254,1662
+"2011","Jul-Dec","Traffic","WA","Non-collision transport accident",512,2200
+"2011","Jul-Dec","Traffic","WA","Other",304,1485
+"2011","Jul-Dec","Traffic","SA","Car, pick-up truck or van",484,2436
+"2011","Jul-Dec","Traffic","SA","Fixed or stationary object",212,1031
+"2011","Jul-Dec","Traffic","SA","Non-collision transport accident",327,1310
+"2011","Jul-Dec","Traffic","SA","Other",189,809
+"2011","Jul-Dec","Traffic","Tas","Car, pick-up truck or van",74,668
+"2011","Jul-Dec","Traffic","Tas","Fixed or stationary object",50,388
+"2011","Jul-Dec","Traffic","Tas","Non-collision transport accident",70,279
+"2011","Jul-Dec","Traffic","Tas","Other",52,411
+"2011","Jul-Dec","Traffic","ACT","Car, pick-up truck or van",84,620
+"2011","Jul-Dec","Traffic","ACT","Fixed or stationary object",41,153
+"2011","Jul-Dec","Traffic","ACT","Non-collision transport accident",80,167
+"2011","Jul-Dec","Traffic","ACT","Other",49,174
+"2011","Jul-Dec","Traffic","NT","Car, pick-up truck or van",49,234
+"2011","Jul-Dec","Traffic","NT","Fixed or stationary object",37,248
+"2011","Jul-Dec","Traffic","NT","Non-collision transport accident",115,506
+"2011","Jul-Dec","Traffic","NT","Other",42,210
+"2012","Jan-Jun","Traffic","NSW","Car, pick-up truck or van",2403,11059
+"2012","Jan-Jun","Traffic","NSW","Fixed or stationary object",776,3790
+"2012","Jan-Jun","Traffic","NSW","Non-collision transport accident",1195,4478
+"2012","Jan-Jun","Traffic","NSW","Other",1056,4358
+"2012","Jan-Jun","Traffic","Vic","Car, pick-up truck or van",2129,7399
+"2012","Jan-Jun","Traffic","Vic","Fixed or stationary object",704,2789
+"2012","Jan-Jun","Traffic","Vic","Non-collision transport accident",1013,3118
+"2012","Jan-Jun","Traffic","Vic","Other",823,2701
+"2012","Jan-Jun","Traffic","Qld","Car, pick-up truck or van",1079,5479
+"2012","Jan-Jun","Traffic","Qld","Fixed or stationary object",442,2875
+"2012","Jan-Jun","Traffic","Qld","Non-collision transport accident",944,3393
+"2012","Jan-Jun","Traffic","Qld","Other",701,2569
+"2012","Jan-Jun","Traffic","WA","Car, pick-up truck or van",617,3309
+"2012","Jan-Jun","Traffic","WA","Fixed or stationary object",222,1548
+"2012","Jan-Jun","Traffic","WA","Non-collision transport accident",551,2779
+"2012","Jan-Jun","Traffic","WA","Other",302,1184
+"2012","Jan-Jun","Traffic","SA","Car, pick-up truck or van",445,2645
+"2012","Jan-Jun","Traffic","SA","Fixed or stationary object",156,1045
+"2012","Jan-Jun","Traffic","SA","Non-collision transport accident",321,1128
+"2012","Jan-Jun","Traffic","SA","Other",185,1279
+"2012","Jan-Jun","Traffic","Tas","Car, pick-up truck or van",89,658
+"2012","Jan-Jun","Traffic","Tas","Fixed or stationary object",35,185
+"2012","Jan-Jun","Traffic","Tas","Non-collision transport accident",101,559
+"2012","Jan-Jun","Traffic","Tas","Other",46,296
+"2012","Jan-Jun","Traffic","ACT","Car, pick-up truck or van",127,561
+"2012","Jan-Jun","Traffic","ACT","Fixed or stationary object",40,252
+"2012","Jan-Jun","Traffic","ACT","Non-collision transport accident",107,316
+"2012","Jan-Jun","Traffic","ACT","Other",39,152
+"2012","Jan-Jun","Traffic","NT","Car, pick-up truck or van",62,430
+"2012","Jan-Jun","Traffic","NT","Fixed or stationary object",23,150
+"2012","Jan-Jun","Traffic","NT","Non-collision transport accident",86,573
+"2012","Jan-Jun","Traffic","NT","Other",44,143
+"2012","Jul-Dec","Traffic","NSW","Car, pick-up truck or van",2429,12090
+"2012","Jul-Dec","Traffic","NSW","Fixed or stationary object",848,4415
+"2012","Jul-Dec","Traffic","NSW","Non-collision transport accident",1311,4599
+"2012","Jul-Dec","Traffic","NSW","Other",1103,5169
+"2012","Jul-Dec","Traffic","Vic","Car, pick-up truck or van",1601,6550
+"2012","Jul-Dec","Traffic","Vic","Fixed or stationary object",514,2563
+"2012","Jul-Dec","Traffic","Vic","Non-collision transport accident",682,2400
+"2012","Jul-Dec","Traffic","Vic","Other",632,2725
+"2012","Jul-Dec","Traffic","Qld","Car, pick-up truck or van",1253,6544
+"2012","Jul-Dec","Traffic","Qld","Fixed or stationary object",534,2623
+"2012","Jul-Dec","Traffic","Qld","Non-collision transport accident",1082,3793
+"2012","Jul-Dec","Traffic","Qld","Other",778,3138
+"2012","Jul-Dec","Traffic","WA","Car, pick-up truck or van",635,3413
+"2012","Jul-Dec","Traffic","WA","Fixed or stationary object",222,1577
+"2012","Jul-Dec","Traffic","WA","Non-collision transport accident",573,2653
+"2012","Jul-Dec","Traffic","WA","Other",371,1436
+"2012","Jul-Dec","Traffic","SA","Car, pick-up truck or van",466,2804
+"2012","Jul-Dec","Traffic","SA","Fixed or stationary object",200,1168
+"2012","Jul-Dec","Traffic","SA","Non-collision transport accident",352,1643
+"2012","Jul-Dec","Traffic","SA","Other",186,721
+"2012","Jul-Dec","Traffic","Tas","Car, pick-up truck or van",79,548
+"2012","Jul-Dec","Traffic","Tas","Fixed or stationary object",37,184
+"2012","Jul-Dec","Traffic","Tas","Non-collision transport accident",92,246
+"2012","Jul-Dec","Traffic","Tas","Other",57,172
+"2012","Jul-Dec","Traffic","ACT","Car, pick-up truck or van",96,432
+"2012","Jul-Dec","Traffic","ACT","Fixed or stationary object",37,144
+"2012","Jul-Dec","Traffic","ACT","Non-collision transport accident",100,202
+"2012","Jul-Dec","Traffic","ACT","Other",55,207
+"2012","Jul-Dec","Traffic","NT","Car, pick-up truck or van",57,502
+"2012","Jul-Dec","Traffic","NT","Fixed or stationary object",29,225
+"2012","Jul-Dec","Traffic","NT","Non-collision transport accident",130,519
+"2012","Jul-Dec","Traffic","NT","Other",65,413
+"2013","Jan-Jun","Traffic","NSW","Car, pick-up truck or van",2373,10331
+"2013","Jan-Jun","Traffic","NSW","Fixed or stationary object",775,4135
+"2013","Jan-Jun","Traffic","NSW","Non-collision transport accident",1343,4511
+"2013","Jan-Jun","Traffic","NSW","Other",977,3908
+"2013","Jan-Jun","Traffic","Vic","Car, pick-up truck or van",1723,6652
+"2013","Jan-Jun","Traffic","Vic","Fixed or stationary object",564,3084
+"2013","Jan-Jun","Traffic","Vic","Non-collision transport accident",899,2749
+"2013","Jan-Jun","Traffic","Vic","Other",712,2831
+"2013","Jan-Jun","Traffic","Qld","Car, pick-up truck or van",1306,5441
+"2013","Jan-Jun","Traffic","Qld","Fixed or stationary object",497,2128
+"2013","Jan-Jun","Traffic","Qld","Non-collision transport accident",1133,3588
+"2013","Jan-Jun","Traffic","Qld","Other",783,2934
+"2013","Jan-Jun","Traffic","WA","Car, pick-up truck or van",638,3324
+"2013","Jan-Jun","Traffic","WA","Fixed or stationary object",247,1492
+"2013","Jan-Jun","Traffic","WA","Non-collision transport accident",523,2159
+"2013","Jan-Jun","Traffic","WA","Other",394,1502
+"2013","Jan-Jun","Traffic","SA","Car, pick-up truck or van",385,2148
+"2013","Jan-Jun","Traffic","SA","Fixed or stationary object",183,1182
+"2013","Jan-Jun","Traffic","SA","Non-collision transport accident",332,1360
+"2013","Jan-Jun","Traffic","SA","Other",163,1021
+"2013","Jan-Jun","Traffic","Tas","Car, pick-up truck or van",92,596
+"2013","Jan-Jun","Traffic","Tas","Fixed or stationary object",58,302
+"2013","Jan-Jun","Traffic","Tas","Non-collision transport accident",84,315
+"2013","Jan-Jun","Traffic","Tas","Other",44,171
+"2013","Jan-Jun","Traffic","ACT","Car, pick-up truck or van",101,623
+"2013","Jan-Jun","Traffic","ACT","Fixed or stationary object",33,231
+"2013","Jan-Jun","Traffic","ACT","Non-collision transport accident",108,352
+"2013","Jan-Jun","Traffic","ACT","Other",66,315
+"2013","Jan-Jun","Traffic","NT","Car, pick-up truck or van",66,479
+"2013","Jan-Jun","Traffic","NT","Fixed or stationary object",39,257
+"2013","Jan-Jun","Traffic","NT","Non-collision transport accident",120,813
+"2013","Jan-Jun","Traffic","NT","Other",33,145
+"2013","Jul-Dec","Traffic","NSW","Car, pick-up truck or van",2675,10680
+"2013","Jul-Dec","Traffic","NSW","Fixed or stationary object",855,4228
+"2013","Jul-Dec","Traffic","NSW","Non-collision transport accident",1347,4848
+"2013","Jul-Dec","Traffic","NSW","Other",1076,4398
+"2013","Jul-Dec","Traffic","Vic","Car, pick-up truck or van",1715,6287
+"2013","Jul-Dec","Traffic","Vic","Fixed or stationary object",613,2471
+"2013","Jul-Dec","Traffic","Vic","Non-collision transport accident",852,2537
+"2013","Jul-Dec","Traffic","Vic","Other",706,2455
+"2013","Jul-Dec","Traffic","Qld","Car, pick-up truck or van",1427,5689
+"2013","Jul-Dec","Traffic","Qld","Fixed or stationary object",515,1941
+"2013","Jul-Dec","Traffic","Qld","Non-collision transport accident",1281,4181
+"2013","Jul-Dec","Traffic","Qld","Other",879,3117
+"2013","Jul-Dec","Traffic","WA","Car, pick-up truck or van",603,3495
+"2013","Jul-Dec","Traffic","WA","Fixed or stationary object",213,1836
+"2013","Jul-Dec","Traffic","WA","Non-collision transport accident",525,2288
+"2013","Jul-Dec","Traffic","WA","Other",332,1130
+"2013","Jul-Dec","Traffic","SA","Car, pick-up truck or van",457,2629
+"2013","Jul-Dec","Traffic","SA","Fixed or stationary object",167,1012
+"2013","Jul-Dec","Traffic","SA","Non-collision transport accident",340,1164
+"2013","Jul-Dec","Traffic","SA","Other",194,1055
+"2013","Jul-Dec","Traffic","Tas","Car, pick-up truck or van",87,702
+"2013","Jul-Dec","Traffic","Tas","Fixed or stationary object",38,156
+"2013","Jul-Dec","Traffic","Tas","Non-collision transport accident",112,333
+"2013","Jul-Dec","Traffic","Tas","Other",55,316
+"2013","Jul-Dec","Traffic","ACT","Car, pick-up truck or van",85,463
+"2013","Jul-Dec","Traffic","ACT","Fixed or stationary object",45,170
+"2013","Jul-Dec","Traffic","ACT","Non-collision transport accident",82,209
+"2013","Jul-Dec","Traffic","ACT","Other",53,154
+"2013","Jul-Dec","Traffic","NT","Car, pick-up truck or van",58,336
+"2013","Jul-Dec","Traffic","NT","Fixed or stationary object",48,321
+"2013","Jul-Dec","Traffic","NT","Non-collision transport accident",151,983
+"2013","Jul-Dec","Traffic","NT","Other",46,327
+"2014","Jan-Jun","Traffic","NSW","Car, pick-up truck or van",2458,10564
+"2014","Jan-Jun","Traffic","NSW","Fixed or stationary object",784,4213
+"2014","Jan-Jun","Traffic","NSW","Non-collision transport accident",1349,4627
+"2014","Jan-Jun","Traffic","NSW","Other",1031,3895
+"2014","Jan-Jun","Traffic","Vic","Car, pick-up truck or van",1819,6583
+"2014","Jan-Jun","Traffic","Vic","Fixed or stationary object",636,2845
+"2014","Jan-Jun","Traffic","Vic","Non-collision transport accident",980,3071
+"2014","Jan-Jun","Traffic","Vic","Other",802,2779
+"2014","Jan-Jun","Traffic","Qld","Car, pick-up truck or van",1289,4817
+"2014","Jan-Jun","Traffic","Qld","Fixed or stationary object",533,2437
+"2014","Jan-Jun","Traffic","Qld","Non-collision transport accident",1169,4265
+"2014","Jan-Jun","Traffic","Qld","Other",752,2498
+"2014","Jan-Jun","Traffic","WA","Car, pick-up truck or van",550,2859
+"2014","Jan-Jun","Traffic","WA","Fixed or stationary object",217,1461
+"2014","Jan-Jun","Traffic","WA","Non-collision transport accident",518,2207
+"2014","Jan-Jun","Traffic","WA","Other",324,1518
+"2014","Jan-Jun","Traffic","SA","Car, pick-up truck or van",465,2598
+"2014","Jan-Jun","Traffic","SA","Fixed or stationary object",187,685
+"2014","Jan-Jun","Traffic","SA","Non-collision transport accident",375,1408
+"2014","Jan-Jun","Traffic","SA","Other",198,689
+"2014","Jan-Jun","Traffic","Tas","Car, pick-up truck or van",116,607
+"2014","Jan-Jun","Traffic","Tas","Fixed or stationary object",49,278
+"2014","Jan-Jun","Traffic","Tas","Non-collision transport accident",101,426
+"2014","Jan-Jun","Traffic","Tas","Other",67,226
+"2014","Jan-Jun","Traffic","ACT","Car, pick-up truck or van",104,333
+"2014","Jan-Jun","Traffic","ACT","Fixed or stationary object",44,261
+"2014","Jan-Jun","Traffic","ACT","Non-collision transport accident",82,300
+"2014","Jan-Jun","Traffic","ACT","Other",48,126
+"2014","Jan-Jun","Traffic","NT","Car, pick-up truck or van",70,430
+"2014","Jan-Jun","Traffic","NT","Fixed or stationary object",44,203
+"2014","Jan-Jun","Traffic","NT","Non-collision transport accident",141,722
+"2014","Jan-Jun","Traffic","NT","Other",34,157
+"2014","Jul-Dec","Traffic","NSW","Car, pick-up truck or van",2547,10144
+"2014","Jul-Dec","Traffic","NSW","Fixed or stationary object",805,4185
+"2014","Jul-Dec","Traffic","NSW","Non-collision transport accident",1334,4570
+"2014","Jul-Dec","Traffic","NSW","Other",1005,3842
+"2014","Jul-Dec","Traffic","Vic","Car, pick-up truck or van",1938,5845
+"2014","Jul-Dec","Traffic","Vic","Fixed or stationary object",632,2644
+"2014","Jul-Dec","Traffic","Vic","Non-collision transport accident",1000,3000
+"2014","Jul-Dec","Traffic","Vic","Other",716,2258
+"2014","Jul-Dec","Traffic","Qld","Car, pick-up truck or van",1448,6543
+"2014","Jul-Dec","Traffic","Qld","Fixed or stationary object",541,1814
+"2014","Jul-Dec","Traffic","Qld","Non-collision transport accident",1176,3701
+"2014","Jul-Dec","Traffic","Qld","Other",817,2941
+"2014","Jul-Dec","Traffic","WA","Car, pick-up truck or van",490,3065
+"2014","Jul-Dec","Traffic","WA","Fixed or stationary object",222,1628
+"2014","Jul-Dec","Traffic","WA","Non-collision transport accident",497,2618
+"2014","Jul-Dec","Traffic","WA","Other",336,1233
+"2014","Jul-Dec","Traffic","SA","Car, pick-up truck or van",449,2533
+"2014","Jul-Dec","Traffic","SA","Fixed or stationary object",164,966
+"2014","Jul-Dec","Traffic","SA","Non-collision transport accident",366,1346
+"2014","Jul-Dec","Traffic","SA","Other",177,971
+"2014","Jul-Dec","Traffic","Tas","Car, pick-up truck or van",87,491
+"2014","Jul-Dec","Traffic","Tas","Fixed or stationary object",47,193
+"2014","Jul-Dec","Traffic","Tas","Non-collision transport accident",116,451
+"2014","Jul-Dec","Traffic","Tas","Other",63,197
+"2014","Jul-Dec","Traffic","ACT","Car, pick-up truck or van",87,368
+"2014","Jul-Dec","Traffic","ACT","Fixed or stationary object",28,158
+"2014","Jul-Dec","Traffic","ACT","Non-collision transport accident",103,295
+"2014","Jul-Dec","Traffic","ACT","Other",46,185
+"2014","Jul-Dec","Traffic","NT","Car, pick-up truck or van",75,464
+"2014","Jul-Dec","Traffic","NT","Fixed or stationary object",36,214
+"2014","Jul-Dec","Traffic","NT","Non-collision transport accident",131,568
+"2014","Jul-Dec","Traffic","NT","Other",44,209
+"2015","Jan-Jun","Traffic","NSW","Car, pick-up truck or van",2487,9397
+"2015","Jan-Jun","Traffic","NSW","Fixed or stationary object",886,4350
+"2015","Jan-Jun","Traffic","NSW","Non-collision transport accident",1347,4452
+"2015","Jan-Jun","Traffic","NSW","Other",901,3392
+"2015","Jan-Jun","Traffic","Vic","Car, pick-up truck or van",1999,6158
+"2015","Jan-Jun","Traffic","Vic","Fixed or stationary object",641,2712
+"2015","Jan-Jun","Traffic","Vic","Non-collision transport accident",1071,3135
+"2015","Jan-Jun","Traffic","Vic","Other",821,2910
+"2015","Jan-Jun","Traffic","Qld","Car, pick-up truck or van",1554,5036
+"2015","Jan-Jun","Traffic","Qld","Fixed or stationary object",533,2068
+"2015","Jan-Jun","Traffic","Qld","Non-collision transport accident",1182,3498
+"2015","Jan-Jun","Traffic","Qld","Other",813,2907
+"2015","Jan-Jun","Traffic","WA","Car, pick-up truck or van",550,2729
+"2015","Jan-Jun","Traffic","WA","Fixed or stationary object",250,1920
+"2015","Jan-Jun","Traffic","WA","Non-collision transport accident",480,2357
+"2015","Jan-Jun","Traffic","WA","Other",307,1438
+"2015","Jan-Jun","Traffic","SA","Car, pick-up truck or van",429,2281
+"2015","Jan-Jun","Traffic","SA","Fixed or stationary object",184,1064
+"2015","Jan-Jun","Traffic","SA","Non-collision transport accident",356,1099
+"2015","Jan-Jun","Traffic","SA","Other",211,788
+"2015","Jan-Jun","Traffic","Tas","Car, pick-up truck or van",101,584
+"2015","Jan-Jun","Traffic","Tas","Fixed or stationary object",69,269
+"2015","Jan-Jun","Traffic","Tas","Non-collision transport accident",112,481
+"2015","Jan-Jun","Traffic","Tas","Other",63,369
+"2015","Jan-Jun","Traffic","ACT","Car, pick-up truck or van",105,458
+"2015","Jan-Jun","Traffic","ACT","Fixed or stationary object",33,265
+"2015","Jan-Jun","Traffic","ACT","Non-collision transport accident",126,325
+"2015","Jan-Jun","Traffic","ACT","Other",72,253
+"2015","Jan-Jun","Traffic","NT","Car, pick-up truck or van",93,516
+"2015","Jan-Jun","Traffic","NT","Fixed or stationary object",30,138
+"2015","Jan-Jun","Traffic","NT","Non-collision transport accident",162,627
+"2015","Jan-Jun","Traffic","NT","Other",38,120
+"2015","Jul-Dec","Traffic","NSW","Car, pick-up truck or van",2518,14760
+"2015","Jul-Dec","Traffic","NSW","Fixed or stationary object",783,6426
+"2015","Jul-Dec","Traffic","NSW","Non-collision transport accident",1310,5476
+"2015","Jul-Dec","Traffic","NSW","Other",852,6078
+"2015","Jul-Dec","Traffic","Vic","Car, pick-up truck or van",2251,17681
+"2015","Jul-Dec","Traffic","Vic","Fixed or stationary object",609,6836
+"2015","Jul-Dec","Traffic","Vic","Non-collision transport accident",928,4306
+"2015","Jul-Dec","Traffic","Vic","Other",878,6334
+"2015","Jul-Dec","Traffic","Qld","Car, pick-up truck or van",1565,7507
+"2015","Jul-Dec","Traffic","Qld","Fixed or stationary object",602,4349
+"2015","Jul-Dec","Traffic","Qld","Non-collision transport accident",1269,4927
+"2015","Jul-Dec","Traffic","Qld","Other",788,3978
+"2015","Jul-Dec","Traffic","WA","Car, pick-up truck or van",550,3847
+"2015","Jul-Dec","Traffic","WA","Fixed or stationary object",209,2082
+"2015","Jul-Dec","Traffic","WA","Non-collision transport accident",493,2454
+"2015","Jul-Dec","Traffic","WA","Other",344,1618
+"2015","Jul-Dec","Traffic","SA","Car, pick-up truck or van",488,2186
+"2015","Jul-Dec","Traffic","SA","Fixed or stationary object",210,1292
+"2015","Jul-Dec","Traffic","SA","Non-collision transport accident",390,1438
+"2015","Jul-Dec","Traffic","SA","Other",199,1019
+"2015","Jul-Dec","Traffic","Tas","Car, pick-up truck or van",98,554
+"2015","Jul-Dec","Traffic","Tas","Fixed or stationary object",62,418
+"2015","Jul-Dec","Traffic","Tas","Non-collision transport accident",108,317
+"2015","Jul-Dec","Traffic","Tas","Other",64,451
+"2015","Jul-Dec","Traffic","ACT","Car, pick-up truck or van",139,570
+"2015","Jul-Dec","Traffic","ACT","Fixed or stationary object",43,410
+"2015","Jul-Dec","Traffic","ACT","Non-collision transport accident",107,273
+"2015","Jul-Dec","Traffic","ACT","Other",75,342
+"2015","Jul-Dec","Traffic","NT","Car, pick-up truck or van",89,671
+"2015","Jul-Dec","Traffic","NT","Fixed or stationary object",53,164
+"2015","Jul-Dec","Traffic","NT","Non-collision transport accident",177,1027
+"2015","Jul-Dec","Traffic","NT","Other",49,198
+"2016","Jan-Jun","Traffic","NSW","Car, pick-up truck or van",2596,12150
+"2016","Jan-Jun","Traffic","NSW","Fixed or stationary object",867,6300
+"2016","Jan-Jun","Traffic","NSW","Non-collision transport accident",1349,6232
+"2016","Jan-Jun","Traffic","NSW","Other",964,5631
+"2016","Jan-Jun","Traffic","Vic","Car, pick-up truck or van",2377,15977
+"2016","Jan-Jun","Traffic","Vic","Fixed or stationary object",720,5943
+"2016","Jan-Jun","Traffic","Vic","Non-collision transport accident",1146,5312
+"2016","Jan-Jun","Traffic","Vic","Other",957,5718
+"2016","Jan-Jun","Traffic","Qld","Car, pick-up truck or van",1625,7005
+"2016","Jan-Jun","Traffic","Qld","Fixed or stationary object",649,4076
+"2016","Jan-Jun","Traffic","Qld","Non-collision transport accident",1197,4719
+"2016","Jan-Jun","Traffic","Qld","Other",797,3474
+"2016","Jan-Jun","Traffic","WA","Car, pick-up truck or van",576,4785
+"2016","Jan-Jun","Traffic","WA","Fixed or stationary object",172,1690
+"2016","Jan-Jun","Traffic","WA","Non-collision transport accident",452,2533
+"2016","Jan-Jun","Traffic","WA","Other",308,1756
+"2016","Jan-Jun","Traffic","SA","Car, pick-up truck or van",540,3294
+"2016","Jan-Jun","Traffic","SA","Fixed or stationary object",192,1310
+"2016","Jan-Jun","Traffic","SA","Non-collision transport accident",391,1527
+"2016","Jan-Jun","Traffic","SA","Other",247,1032
+"2016","Jan-Jun","Traffic","Tas","Car, pick-up truck or van",87,546
+"2016","Jan-Jun","Traffic","Tas","Fixed or stationary object",44,371
+"2016","Jan-Jun","Traffic","Tas","Non-collision transport accident",135,578
+"2016","Jan-Jun","Traffic","Tas","Other",64,412
+"2016","Jan-Jun","Traffic","ACT","Car, pick-up truck or van",113,582
+"2016","Jan-Jun","Traffic","ACT","Fixed or stationary object",35,216
+"2016","Jan-Jun","Traffic","ACT","Non-collision transport accident",112,321
+"2016","Jan-Jun","Traffic","ACT","Other",75,303
+"2016","Jan-Jun","Traffic","NT","Car, pick-up truck or van",81,571
+"2016","Jan-Jun","Traffic","NT","Fixed or stationary object",56,199
+"2016","Jan-Jun","Traffic","NT","Non-collision transport accident",117,382
+"2016","Jan-Jun","Traffic","NT","Other",57,349
+"2016","Jul-Dec","Traffic","NSW","Car, pick-up truck or van",2621,14346
+"2016","Jul-Dec","Traffic","NSW","Fixed or stationary object",843,4937
+"2016","Jul-Dec","Traffic","NSW","Non-collision transport accident",1385,5723
+"2016","Jul-Dec","Traffic","NSW","Other",849,5030
+"2016","Jul-Dec","Traffic","Vic","Car, pick-up truck or van",2541,18426
+"2016","Jul-Dec","Traffic","Vic","Fixed or stationary object",695,6949
+"2016","Jul-Dec","Traffic","Vic","Non-collision transport accident",1028,3260
+"2016","Jul-Dec","Traffic","Vic","Other",896,6193
+"2016","Jul-Dec","Traffic","Qld","Car, pick-up truck or van",1755,8212
+"2016","Jul-Dec","Traffic","Qld","Fixed or stationary object",653,3726
+"2016","Jul-Dec","Traffic","Qld","Non-collision transport accident",1179,4249
+"2016","Jul-Dec","Traffic","Qld","Other",847,4356
+"2016","Jul-Dec","Traffic","WA","Car, pick-up truck or van",510,4737
+"2016","Jul-Dec","Traffic","WA","Fixed or stationary object",238,2464
+"2016","Jul-Dec","Traffic","WA","Non-collision transport accident",440,2455
+"2016","Jul-Dec","Traffic","WA","Other",335,1482
+"2016","Jul-Dec","Traffic","SA","Car, pick-up truck or van",524,2725
+"2016","Jul-Dec","Traffic","SA","Fixed or stationary object",195,1191
+"2016","Jul-Dec","Traffic","SA","Non-collision transport accident",374,1109
+"2016","Jul-Dec","Traffic","SA","Other",191,1007
+"2016","Jul-Dec","Traffic","Tas","Car, pick-up truck or van",110,870
+"2016","Jul-Dec","Traffic","Tas","Fixed or stationary object",54,483
+"2016","Jul-Dec","Traffic","Tas","Non-collision transport accident",92,293
+"2016","Jul-Dec","Traffic","Tas","Other",71,411
+"2016","Jul-Dec","Traffic","ACT","Car, pick-up truck or van",122,486
+"2016","Jul-Dec","Traffic","ACT","Fixed or stationary object",43,128
+"2016","Jul-Dec","Traffic","ACT","Non-collision transport accident",99,198
+"2016","Jul-Dec","Traffic","ACT","Other",55,438
+"2016","Jul-Dec","Traffic","NT","Car, pick-up truck or van",87,612
+"2016","Jul-Dec","Traffic","NT","Fixed or stationary object",65,462
+"2016","Jul-Dec","Traffic","NT","Non-collision transport accident",187,888
+"2016","Jul-Dec","Traffic","NT","Other",59,330
+"2017","Jan-Jun","Traffic","NSW","Car, pick-up truck or van",2558,13052
+"2017","Jan-Jun","Traffic","NSW","Fixed or stationary object",800,5018
+"2017","Jan-Jun","Traffic","NSW","Non-collision transport accident",1328,5598
+"2017","Jan-Jun","Traffic","NSW","Other",914,4689
+"2017","Jan-Jun","Traffic","Vic","Car, pick-up truck or van",2665,16669
+"2017","Jan-Jun","Traffic","Vic","Fixed or stationary object",734,6304
+"2017","Jan-Jun","Traffic","Vic","Non-collision transport accident",1155,4579
+"2017","Jan-Jun","Traffic","Vic","Other",894,5367
+"2017","Jan-Jun","Traffic","Qld","Car, pick-up truck or van",1802,7534
+"2017","Jan-Jun","Traffic","Qld","Fixed or stationary object",559,3707
+"2017","Jan-Jun","Traffic","Qld","Non-collision transport accident",1209,4649
+"2017","Jan-Jun","Traffic","Qld","Other",850,3852
+"2017","Jan-Jun","Traffic","WA","Car, pick-up truck or van",548,4211
+"2017","Jan-Jun","Traffic","WA","Fixed or stationary object",211,2320
+"2017","Jan-Jun","Traffic","WA","Non-collision transport accident",491,2322
+"2017","Jan-Jun","Traffic","WA","Other",366,1300
+"2017","Jan-Jun","Traffic","SA","Car, pick-up truck or van",508,3000
+"2017","Jan-Jun","Traffic","SA","Fixed or stationary object",181,1122
+"2017","Jan-Jun","Traffic","SA","Non-collision transport accident",380,1438
+"2017","Jan-Jun","Traffic","SA","Other",244,1366
+"2017","Jan-Jun","Traffic","Tas","Car, pick-up truck or van",99,817
+"2017","Jan-Jun","Traffic","Tas","Fixed or stationary object",53,373
+"2017","Jan-Jun","Traffic","Tas","Non-collision transport accident",127,458
+"2017","Jan-Jun","Traffic","Tas","Other",59,322
+"2017","Jan-Jun","Traffic","ACT","Car, pick-up truck or van",114,420
+"2017","Jan-Jun","Traffic","ACT","Fixed or stationary object",29,118
+"2017","Jan-Jun","Traffic","ACT","Non-collision transport accident",132,358
+"2017","Jan-Jun","Traffic","ACT","Other",62,278
+"2017","Jan-Jun","Traffic","NT","Car, pick-up truck or van",107,729
+"2017","Jan-Jun","Traffic","NT","Fixed or stationary object",46,191
+"2017","Jan-Jun","Traffic","NT","Non-collision transport accident",99,612
+"2017","Jan-Jun","Traffic","NT","Other",44,135
+"2017","Jul-Dec","Traffic","NSW","Car, pick-up truck or van",2454,15541
+"2017","Jul-Dec","Traffic","NSW","Fixed or stationary object",740,4905
+"2017","Jul-Dec","Traffic","NSW","Non-collision transport accident",1310,5539
+"2017","Jul-Dec","Traffic","NSW","Other",912,5172
+"2017","Jul-Dec","Traffic","Vic","Car, pick-up truck or van",2614,15871
+"2017","Jul-Dec","Traffic","Vic","Fixed or stationary object",775,5970
+"2017","Jul-Dec","Traffic","Vic","Non-collision transport accident",1111,4218
+"2017","Jul-Dec","Traffic","Vic","Other",846,5076
+"2017","Jul-Dec","Traffic","Qld","Car, pick-up truck or van",1872,8847
+"2017","Jul-Dec","Traffic","Qld","Fixed or stationary object",665,3033
+"2017","Jul-Dec","Traffic","Qld","Non-collision transport accident",1337,4827
+"2017","Jul-Dec","Traffic","Qld","Other",840,3415
+"2017","Jul-Dec","Traffic","WA","Car, pick-up truck or van",543,3602
+"2017","Jul-Dec","Traffic","WA","Fixed or stationary object",225,2056
+"2017","Jul-Dec","Traffic","WA","Non-collision transport accident",478,2035
+"2017","Jul-Dec","Traffic","WA","Other",333,1314
+"2017","Jul-Dec","Traffic","SA","Car, pick-up truck or van",382,2708
+"2017","Jul-Dec","Traffic","SA","Fixed or stationary object",191,1399
+"2017","Jul-Dec","Traffic","SA","Non-collision transport accident",308,1334
+"2017","Jul-Dec","Traffic","SA","Other",200,1412
+"2017","Jul-Dec","Traffic","Tas","Car, pick-up truck or van",113,1035
+"2017","Jul-Dec","Traffic","Tas","Fixed or stationary object",57,307
+"2017","Jul-Dec","Traffic","Tas","Non-collision transport accident",107,392
+"2017","Jul-Dec","Traffic","Tas","Other",44,606
+"2017","Jul-Dec","Traffic","ACT","Car, pick-up truck or van",107,626
+"2017","Jul-Dec","Traffic","ACT","Fixed or stationary object",45,395
+"2017","Jul-Dec","Traffic","ACT","Non-collision transport accident",87,282
+"2017","Jul-Dec","Traffic","ACT","Other",56,132
+"2017","Jul-Dec","Traffic","NT","Car, pick-up truck or van",105,648
+"2017","Jul-Dec","Traffic","NT","Fixed or stationary object",47,289
+"2017","Jul-Dec","Traffic","NT","Non-collision transport accident",193,836
+"2017","Jul-Dec","Traffic","NT","Other",62,557
+"2018","Jan-Jun","Traffic","NSW","Car, pick-up truck or van",2117,12815
+"2018","Jan-Jun","Traffic","NSW","Fixed or stationary object",702,5398
+"2018","Jan-Jun","Traffic","NSW","Non-collision transport accident",1257,4939
+"2018","Jan-Jun","Traffic","NSW","Other",841,4496
+"2018","Jan-Jun","Traffic","Vic","Car, pick-up truck or van",2902,14351
+"2018","Jan-Jun","Traffic","Vic","Fixed or stationary object",779,6697
+"2018","Jan-Jun","Traffic","Vic","Non-collision transport accident",1272,5548
+"2018","Jan-Jun","Traffic","Vic","Other",948,5735
+"2018","Jan-Jun","Traffic","Qld","Car, pick-up truck or van",1796,7751
+"2018","Jan-Jun","Traffic","Qld","Fixed or stationary object",628,3582
+"2018","Jan-Jun","Traffic","Qld","Non-collision transport accident",1301,5272
+"2018","Jan-Jun","Traffic","Qld","Other",822,3270
+"2018","Jan-Jun","Traffic","WA","Car, pick-up truck or van",578,3242
+"2018","Jan-Jun","Traffic","WA","Fixed or stationary object",207,1397
+"2018","Jan-Jun","Traffic","WA","Non-collision transport accident",495,2067
+"2018","Jan-Jun","Traffic","WA","Other",359,1221
+"2018","Jan-Jun","Traffic","SA","Car, pick-up truck or van",456,2491
+"2018","Jan-Jun","Traffic","SA","Fixed or stationary object",167,1332
+"2018","Jan-Jun","Traffic","SA","Non-collision transport accident",383,1393
+"2018","Jan-Jun","Traffic","SA","Other",210,1271
+"2018","Jan-Jun","Traffic","Tas","Car, pick-up truck or van",112,583
+"2018","Jan-Jun","Traffic","Tas","Fixed or stationary object",56,273
+"2018","Jan-Jun","Traffic","Tas","Non-collision transport accident",141,516
+"2018","Jan-Jun","Traffic","Tas","Other",63,479
+"2018","Jan-Jun","Traffic","ACT","Car, pick-up truck or van",144,606
+"2018","Jan-Jun","Traffic","ACT","Fixed or stationary object",40,137
+"2018","Jan-Jun","Traffic","ACT","Non-collision transport accident",124,320
+"2018","Jan-Jun","Traffic","ACT","Other",60,182
+"2018","Jan-Jun","Traffic","NT","Car, pick-up truck or van",121,655
+"2018","Jan-Jun","Traffic","NT","Fixed or stationary object",69,328
+"2018","Jan-Jun","Traffic","NT","Non-collision transport accident",166,749
+"2018","Jan-Jun","Traffic","NT","Other",56,450
+"2018","Jul-Dec","Traffic","NSW","Car, pick-up truck or van",2017,13364
+"2018","Jul-Dec","Traffic","NSW","Fixed or stationary object",708,5492
+"2018","Jul-Dec","Traffic","NSW","Non-collision transport accident",1254,6789
+"2018","Jul-Dec","Traffic","NSW","Other",898,6231
+"2018","Jul-Dec","Traffic","Vic","Car, pick-up truck or van",2773,14388
+"2018","Jul-Dec","Traffic","Vic","Fixed or stationary object",828,6458
+"2018","Jul-Dec","Traffic","Vic","Non-collision transport accident",1037,4102
+"2018","Jul-Dec","Traffic","Vic","Other",914,6565
+"2018","Jul-Dec","Traffic","Qld","Car, pick-up truck or van",1953,6695
+"2018","Jul-Dec","Traffic","Qld","Fixed or stationary object",643,3754
+"2018","Jul-Dec","Traffic","Qld","Non-collision transport accident",1406,5238
+"2018","Jul-Dec","Traffic","Qld","Other",832,3277
+"2018","Jul-Dec","Traffic","WA","Car, pick-up truck or van",601,3016
+"2018","Jul-Dec","Traffic","WA","Fixed or stationary object",251,1209
+"2018","Jul-Dec","Traffic","WA","Non-collision transport accident",463,1538
+"2018","Jul-Dec","Traffic","WA","Other",320,1390
+"2018","Jul-Dec","Traffic","SA","Car, pick-up truck or van",470,2398
+"2018","Jul-Dec","Traffic","SA","Fixed or stationary object",217,1090
+"2018","Jul-Dec","Traffic","SA","Non-collision transport accident",346,1096
+"2018","Jul-Dec","Traffic","SA","Other",240,1587
+"2018","Jul-Dec","Traffic","Tas","Car, pick-up truck or van",142,1383
+"2018","Jul-Dec","Traffic","Tas","Fixed or stationary object",59,449
+"2018","Jul-Dec","Traffic","Tas","Non-collision transport accident",153,531
+"2018","Jul-Dec","Traffic","Tas","Other",55,462
+"2018","Jul-Dec","Traffic","ACT","Car, pick-up truck or van",139,916
+"2018","Jul-Dec","Traffic","ACT","Fixed or stationary object",39,219
+"2018","Jul-Dec","Traffic","ACT","Non-collision transport accident",89,414
+"2018","Jul-Dec","Traffic","ACT","Other",77,190
+"2018","Jul-Dec","Traffic","NT","Car, pick-up truck or van",119,834
+"2018","Jul-Dec","Traffic","NT","Fixed or stationary object",60,216
+"2018","Jul-Dec","Traffic","NT","Non-collision transport accident",196,1436
+"2018","Jul-Dec","Traffic","NT","Other",45,610
+"2019","Jan-Jun","Traffic","NSW","Car, pick-up truck or van",2139,13838
+"2019","Jan-Jun","Traffic","NSW","Fixed or stationary object",720,7039
+"2019","Jan-Jun","Traffic","NSW","Non-collision transport accident",1259,5509
+"2019","Jan-Jun","Traffic","NSW","Other",871,5683
+"2019","Jan-Jun","Traffic","Vic","Car, pick-up truck or van",2885,14637
+"2019","Jan-Jun","Traffic","Vic","Fixed or stationary object",800,5774
+"2019","Jan-Jun","Traffic","Vic","Non-collision transport accident",1195,4586
+"2019","Jan-Jun","Traffic","Vic","Other",1023,5672
+"2019","Jan-Jun","Traffic","Qld","Car, pick-up truck or van",1884,8237
+"2019","Jan-Jun","Traffic","Qld","Fixed or stationary object",675,3241
+"2019","Jan-Jun","Traffic","Qld","Non-collision transport accident",1268,4246
+"2019","Jan-Jun","Traffic","Qld","Other",816,3438
+"2019","Jan-Jun","Traffic","WA","Car, pick-up truck or van",604,3743
+"2019","Jan-Jun","Traffic","WA","Fixed or stationary object",241,1263
+"2019","Jan-Jun","Traffic","WA","Non-collision transport accident",483,1614
+"2019","Jan-Jun","Traffic","WA","Other",351,1882
+"2019","Jan-Jun","Traffic","SA","Car, pick-up truck or van",442,2047
+"2019","Jan-Jun","Traffic","SA","Fixed or stationary object",181,1071
+"2019","Jan-Jun","Traffic","SA","Non-collision transport accident",359,919
+"2019","Jan-Jun","Traffic","SA","Other",239,1185
+"2019","Jan-Jun","Traffic","Tas","Car, pick-up truck or van",122,1056
+"2019","Jan-Jun","Traffic","Tas","Fixed or stationary object",64,366
+"2019","Jan-Jun","Traffic","Tas","Non-collision transport accident",117,509
+"2019","Jan-Jun","Traffic","Tas","Other",85,650
+"2019","Jan-Jun","Traffic","ACT","Car, pick-up truck or van",138,517
+"2019","Jan-Jun","Traffic","ACT","Fixed or stationary object",44,338
+"2019","Jan-Jun","Traffic","ACT","Non-collision transport accident",116,357
+"2019","Jan-Jun","Traffic","ACT","Other",64,159
+"2019","Jan-Jun","Traffic","NT","Car, pick-up truck or van",68,454
+"2019","Jan-Jun","Traffic","NT","Fixed or stationary object",52,161
+"2019","Jan-Jun","Traffic","NT","Non-collision transport accident",145,747
+"2019","Jan-Jun","Traffic","NT","Other",55,368
+"2019","Jul-Dec","Traffic","NSW","Car, pick-up truck or van",2164,14016
+"2019","Jul-Dec","Traffic","NSW","Fixed or stationary object",654,5926
+"2019","Jul-Dec","Traffic","NSW","Non-collision transport accident",1242,4673
+"2019","Jul-Dec","Traffic","NSW","Other",893,6314
+"2019","Jul-Dec","Traffic","Vic","Car, pick-up truck or van",2745,14736
+"2019","Jul-Dec","Traffic","Vic","Fixed or stationary object",724,6480
+"2019","Jul-Dec","Traffic","Vic","Non-collision transport accident",1019,3510
+"2019","Jul-Dec","Traffic","Vic","Other",1001,5614
+"2019","Jul-Dec","Traffic","Qld","Car, pick-up truck or van",2001,8592
+"2019","Jul-Dec","Traffic","Qld","Fixed or stationary object",647,3075
+"2019","Jul-Dec","Traffic","Qld","Non-collision transport accident",1343,5109
+"2019","Jul-Dec","Traffic","Qld","Other",881,4251
+"2019","Jul-Dec","Traffic","WA","Car, pick-up truck or van",666,3358
+"2019","Jul-Dec","Traffic","WA","Fixed or stationary object",271,1997
+"2019","Jul-Dec","Traffic","WA","Non-collision transport accident",585,2345
+"2019","Jul-Dec","Traffic","WA","Other",333,1620
+"2019","Jul-Dec","Traffic","SA","Car, pick-up truck or van",482,2187
+"2019","Jul-Dec","Traffic","SA","Fixed or stationary object",173,974
+"2019","Jul-Dec","Traffic","SA","Non-collision transport accident",329,1340
+"2019","Jul-Dec","Traffic","SA","Other",252,1080
+"2019","Jul-Dec","Traffic","Tas","Car, pick-up truck or van",101,490
+"2019","Jul-Dec","Traffic","Tas","Fixed or stationary object",51,174
+"2019","Jul-Dec","Traffic","Tas","Non-collision transport accident",96,323
+"2019","Jul-Dec","Traffic","Tas","Other",72,512
+"2019","Jul-Dec","Traffic","ACT","Car, pick-up truck or van",105,559
+"2019","Jul-Dec","Traffic","ACT","Fixed or stationary object",38,284
+"2019","Jul-Dec","Traffic","ACT","Non-collision transport accident",97,362
+"2019","Jul-Dec","Traffic","ACT","Other",63,228
+"2019","Jul-Dec","Traffic","NT","Car, pick-up truck or van",87,573
+"2019","Jul-Dec","Traffic","NT","Fixed or stationary object",62,290
+"2019","Jul-Dec","Traffic","NT","Non-collision transport accident",132,840
+"2019","Jul-Dec","Traffic","NT","Other",55,376
+"2020","Jan-Jun","Traffic","NSW","Car, pick-up truck or van",1591,10110
+"2020","Jan-Jun","Traffic","NSW","Fixed or stationary object",651,4948
+"2020","Jan-Jun","Traffic","NSW","Non-collision transport accident",1194,4963
+"2020","Jan-Jun","Traffic","NSW","Other",755,5885
+"2020","Jan-Jun","Traffic","Vic","Car, pick-up truck or van",2268,13179
+"2020","Jan-Jun","Traffic","Vic","Fixed or stationary object",674,5234
+"2020","Jan-Jun","Traffic","Vic","Non-collision transport accident",1140,4371
+"2020","Jan-Jun","Traffic","Vic","Other",948,4230
+"2020","Jan-Jun","Traffic","Qld","Car, pick-up truck or van",1549,6287
+"2020","Jan-Jun","Traffic","Qld","Fixed or stationary object",627,3127
+"2020","Jan-Jun","Traffic","Qld","Non-collision transport accident",1332,4652
+"2020","Jan-Jun","Traffic","Qld","Other",779,3402
+"2020","Jan-Jun","Traffic","WA","Car, pick-up truck or van",486,3197
+"2020","Jan-Jun","Traffic","WA","Fixed or stationary object",287,1543
+"2020","Jan-Jun","Traffic","WA","Non-collision transport accident",583,2685
+"2020","Jan-Jun","Traffic","WA","Other",348,1716
+"2020","Jan-Jun","Traffic","SA","Car, pick-up truck or van",411,2077
+"2020","Jan-Jun","Traffic","SA","Fixed or stationary object",184,1391
+"2020","Jan-Jun","Traffic","SA","Non-collision transport accident",367,1638
+"2020","Jan-Jun","Traffic","SA","Other",209,990
+"2020","Jan-Jun","Traffic","Tas","Car, pick-up truck or van",109,469
+"2020","Jan-Jun","Traffic","Tas","Fixed or stationary object",45,214
+"2020","Jan-Jun","Traffic","Tas","Non-collision transport accident",117,400
+"2020","Jan-Jun","Traffic","Tas","Other",57,290
+"2020","Jan-Jun","Traffic","ACT","Car, pick-up truck or van",78,546
+"2020","Jan-Jun","Traffic","ACT","Fixed or stationary object",41,396
+"2020","Jan-Jun","Traffic","ACT","Non-collision transport accident",99,247
+"2020","Jan-Jun","Traffic","ACT","Other",68,265
+"2020","Jan-Jun","Traffic","NT","Car, pick-up truck or van",82,658
+"2020","Jan-Jun","Traffic","NT","Fixed or stationary object",56,190
+"2020","Jan-Jun","Traffic","NT","Non-collision transport accident",122,470
+"2020","Jan-Jun","Traffic","NT","Other",62,164
+"2020","Jul-Dec","Traffic","NSW","Car, pick-up truck or van",2139,15236
+"2020","Jul-Dec","Traffic","NSW","Fixed or stationary object",754,6508
+"2020","Jul-Dec","Traffic","NSW","Non-collision transport accident",1351,5410
+"2020","Jul-Dec","Traffic","NSW","Other",839,5311
+"2020","Jul-Dec","Traffic","Vic","Car, pick-up truck or van",1922,8088
+"2020","Jul-Dec","Traffic","Vic","Fixed or stationary object",674,5226
+"2020","Jul-Dec","Traffic","Vic","Non-collision transport accident",1337,3888
+"2020","Jul-Dec","Traffic","Vic","Other",921,3721
+"2020","Jul-Dec","Traffic","Qld","Car, pick-up truck or van",2193,7248
+"2020","Jul-Dec","Traffic","Qld","Fixed or stationary object",889,4335
+"2020","Jul-Dec","Traffic","Qld","Non-collision transport accident",1564,4742
+"2020","Jul-Dec","Traffic","Qld","Other",868,4057
+"2020","Jul-Dec","Traffic","WA","Car, pick-up truck or van",677,4299
+"2020","Jul-Dec","Traffic","WA","Fixed or stationary object",298,1582
+"2020","Jul-Dec","Traffic","WA","Non-collision transport accident",588,2357
+"2020","Jul-Dec","Traffic","WA","Other",369,1409
+"2020","Jul-Dec","Traffic","SA","Car, pick-up truck or van",505,2823
+"2020","Jul-Dec","Traffic","SA","Fixed or stationary object",197,1300
+"2020","Jul-Dec","Traffic","SA","Non-collision transport accident",416,1276
+"2020","Jul-Dec","Traffic","SA","Other",214,685
+"2020","Jul-Dec","Traffic","Tas","Car, pick-up truck or van",124,551
+"2020","Jul-Dec","Traffic","Tas","Fixed or stationary object",65,474
+"2020","Jul-Dec","Traffic","Tas","Non-collision transport accident",173,516
+"2020","Jul-Dec","Traffic","Tas","Other",88,568
+"2020","Jul-Dec","Traffic","ACT","Car, pick-up truck or van",106,322
+"2020","Jul-Dec","Traffic","ACT","Fixed or stationary object",45,148
+"2020","Jul-Dec","Traffic","ACT","Non-collision transport accident",118,430
+"2020","Jul-Dec","Traffic","ACT","Other",74,183
+"2020","Jul-Dec","Traffic","NT","Car, pick-up truck or van",124,613
+"2020","Jul-Dec","Traffic","NT","Fixed or stationary object",72,359
+"2020","Jul-Dec","Traffic","NT","Non-collision transport accident",216,754
+"2020","Jul-Dec","Traffic","NT","Other",53,259
+"2021","Jan-Jun","Traffic","NSW","Car, pick-up truck or van",2085,13966
+"2021","Jan-Jun","Traffic","NSW","Fixed or stationary object",729,5772
+"2021","Jan-Jun","Traffic","NSW","Non-collision transport accident",1325,5707
+"2021","Jan-Jun","Traffic","NSW","Other",866,5679
+"2021","Jan-Jun","Traffic","Vic","Car, pick-up truck or van",2701,13016
+"2021","Jan-Jun","Traffic","Vic","Fixed or stationary object",764,5767
+"2021","Jan-Jun","Traffic","Vic","Non-collision transport accident",1420,4830
+"2021","Jan-Jun","Traffic","Vic","Other",1036,5938
+"2021","Jan-Jun","Traffic","Qld","Car, pick-up truck or van",2152,8606
+"2021","Jan-Jun","Traffic","Qld","Fixed or stationary object",741,3751
+"2021","Jan-Jun","Traffic","Qld","Non-collision transport accident",1394,5013
+"2021","Jan-Jun","Traffic","Qld","Other",840,3440
+"2021","Jan-Jun","Traffic","WA","Car, pick-up truck or van",669,4474
+"2021","Jan-Jun","Traffic","WA","Fixed or stationary object",267,1744
+"2021","Jan-Jun","Traffic","WA","Non-collision transport accident",522,2293
+"2021","Jan-Jun","Traffic","WA","Other",342,2043
+"2021","Jan-Jun","Traffic","SA","Car, pick-up truck or van",568,2558
+"2021","Jan-Jun","Traffic","SA","Fixed or stationary object",196,1033
+"2021","Jan-Jun","Traffic","SA","Non-collision transport accident",342,1265
+"2021","Jan-Jun","Traffic","SA","Other",231,1202
+"2021","Jan-Jun","Traffic","Tas","Car, pick-up truck or van",156,1426
+"2021","Jan-Jun","Traffic","Tas","Fixed or stationary object",65,481
+"2021","Jan-Jun","Traffic","Tas","Non-collision transport accident",127,559
+"2021","Jan-Jun","Traffic","Tas","Other",74,376
+"2021","Jan-Jun","Traffic","ACT","Car, pick-up truck or van",151,580
+"2021","Jan-Jun","Traffic","ACT","Fixed or stationary object",52,297
+"2021","Jan-Jun","Traffic","ACT","Non-collision transport accident",146,557
+"2021","Jan-Jun","Traffic","ACT","Other",92,202
+"2021","Jan-Jun","Traffic","NT","Car, pick-up truck or van",117,405
+"2021","Jan-Jun","Traffic","NT","Fixed or stationary object",33,63
+"2021","Jan-Jun","Traffic","NT","Non-collision transport accident",144,968
+"2021","Jan-Jun","Traffic","NT","Other",54,184
+"2021","Jul-Dec","Traffic","NSW","Car, pick-up truck or van",1369,9614
+"2021","Jul-Dec","Traffic","NSW","Fixed or stationary object",585,4502
+"2021","Jul-Dec","Traffic","NSW","Non-collision transport accident",1238,4797
+"2021","Jul-Dec","Traffic","NSW","Other",806,5061
+"2021","Jul-Dec","Traffic","Vic","Car, pick-up truck or van",2283,11301
+"2021","Jul-Dec","Traffic","Vic","Fixed or stationary object",710,4733
+"2021","Jul-Dec","Traffic","Vic","Non-collision transport accident",1254,4413
+"2021","Jul-Dec","Traffic","Vic","Other",962,4701
+"2021","Jul-Dec","Traffic","Qld","Car, pick-up truck or van",2244,8129
+"2021","Jul-Dec","Traffic","Qld","Fixed or stationary object",769,3091
+"2021","Jul-Dec","Traffic","Qld","Non-collision transport accident",1437,4899
+"2021","Jul-Dec","Traffic","Qld","Other",870,3960
+"2021","Jul-Dec","Traffic","WA","Car, pick-up truck or van",645,4802
+"2021","Jul-Dec","Traffic","WA","Fixed or stationary object",250,2514
+"2021","Jul-Dec","Traffic","WA","Non-collision transport accident",532,2683
+"2021","Jul-Dec","Traffic","WA","Other",341,1735
+"2021","Jul-Dec","Traffic","SA","Car, pick-up truck or van",525,2419
+"2021","Jul-Dec","Traffic","SA","Fixed or stationary object",222,1212
+"2021","Jul-Dec","Traffic","SA","Non-collision transport accident",328,1208
+"2021","Jul-Dec","Traffic","SA","Other",220,955
+"2021","Jul-Dec","Traffic","Tas","Car, pick-up truck or van",138,1072
+"2021","Jul-Dec","Traffic","Tas","Fixed or stationary object",69,362
+"2021","Jul-Dec","Traffic","Tas","Non-collision transport accident",114,279
+"2021","Jul-Dec","Traffic","Tas","Other",62,305
+"2021","Jul-Dec","Traffic","ACT","Car, pick-up truck or van",81,369
+"2021","Jul-Dec","Traffic","ACT","Fixed or stationary object",30,138
+"2021","Jul-Dec","Traffic","ACT","Non-collision transport accident",102,374
+"2021","Jul-Dec","Traffic","ACT","Other",86,222
+"2021","Jul-Dec","Traffic","NT","Car, pick-up truck or van",88,319
+"2021","Jul-Dec","Traffic","NT","Fixed or stationary object",51,237
+"2021","Jul-Dec","Traffic","NT","Non-collision transport accident",171,1458
+"2021","Jul-Dec","Traffic","NT","Other",52,439
