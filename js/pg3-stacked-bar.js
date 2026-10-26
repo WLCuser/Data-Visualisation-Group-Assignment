@@ -75,16 +75,14 @@ const drawStacked = data => {
         .text("Hospitalisations")
         .attr("x", -margin.left)
         .attr("y", -10)
-        .attr("text-anchor", "start")
-        .attr("fill", "currentColor");
+        .attr("text-anchor", "start");
 
     innerChart
         .append("text")
         .text("Remoteness area")
         .attr("x", innerWidth)
         .attr("y", innerHeight + margin.bottom - 10)
-        .attr("text-anchor", "end")
-        .attr("fill", "currentColor");
+        .attr("text-anchor", "end");
 
     // Stacked bars: one group per status, one rect per remoteness area
     innerChart
@@ -119,7 +117,6 @@ const drawStacked = data => {
         row.append("text")
             .attr("x", 20)
             .attr("y", 5)
-            .attr("fill", "currentColor")
             .style("alignment-baseline", "middle")
             .style("font-size", "12px")
             .text(status);
