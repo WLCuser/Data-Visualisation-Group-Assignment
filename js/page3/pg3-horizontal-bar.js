@@ -9,6 +9,7 @@ d3.csv("data/First-Nations-Roaduser.csv", d => {
 }).then(data => {
     console.log(data);
     drawBarChart(data);
+    registerChart("#chart2", data, drawBarChart);
 });
 
 // Wraps long tick labels on a LEFT axis, vertically centred on the tick

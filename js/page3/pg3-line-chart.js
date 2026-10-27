@@ -8,9 +8,10 @@ d3.csv("data/First-Nations-Age.csv", d => {
 }).then(data => {
     console.log(data);
     drawLineChart(data);
+    registerChart("#chart1", data, drawLineChart, false);
 });
 
-const drawLineChart = data => {
+const drawLineChart = (data, selectedYear = "all") => {
     const svg = d3.select("#chart1")
         .append("svg")
         .attr("viewBox", `0,0,${width},${height}`);
@@ -85,7 +86,8 @@ const drawLineChart = data => {
         .attr("cx", d => xScale(d.year))
         .attr("cy", d => yScale(d.total))
         .attr("r", 4)
-        .attr("fill", d => color(d.status));
+        .attr("fill", d => color(d.status))
+        .attr("opacity", d => (selectedYear === "all" || d.year === selectedYear ? 1 : 0.25));
 
     // Lines: one per status
     const lineGenerator = d3.line()

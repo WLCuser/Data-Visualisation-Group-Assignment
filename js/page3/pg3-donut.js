@@ -9,6 +9,7 @@ d3.csv("data/First-Nations-Counterparty.csv", d => {
 }).then(data => {
     console.log(data);
     drawDonutChart(data);
+    registerChart("#chart5", data, drawDonutChart);
 });
 
 const drawDonutChart = data => {

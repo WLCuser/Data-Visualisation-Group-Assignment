@@ -9,6 +9,7 @@ d3.csv("data/First-Nations-Remoteness.csv", d => {
 }).then(data => {
     console.log(data);
     drawStacked(data);
+    registerChart("#chart4", data, drawStacked);
 });
 
 const drawStacked = data => {

@@ -9,6 +9,8 @@ d3.csv("data/First-Nations-Age.csv", d => {
 }).then(data => {
     console.log(data);
     drawAgeChart(data);
+    registerChart("#chart3", data, drawAgeChart);
+    populateFilters(data);
 });
 
 const drawAgeChart = data => {
