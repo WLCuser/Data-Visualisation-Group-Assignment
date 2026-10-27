@@ -9,6 +9,8 @@ d3.csv("data/First-Nations-Age.csv", d => {
     console.log(data);
     drawLineChart(data);
     registerChart("#chart1", data, drawLineChart, false);
+    createTooltip("#chart1");
+    handleMouseEvents("#chart1");
 });
 
 const drawLineChart = (data, selectedYear = "all") => {
@@ -85,7 +87,7 @@ const drawLineChart = (data, selectedYear = "all") => {
         .join("circle")
         .attr("cx", d => xScale(d.year))
         .attr("cy", d => yScale(d.total))
-        .attr("r", 4)
+        .attr("r", 5)
         .attr("fill", d => color(d.status))
         .attr("opacity", d => (selectedYear === "all" || d.year === selectedYear ? 1 : 0.25));
 

@@ -10,6 +10,8 @@ d3.csv("data/First-Nations-Remoteness.csv", d => {
     console.log(data);
     drawStacked(data);
     registerChart("#chart4", data, drawStacked);
+    createTooltip("#chart4");
+    handleMouseEvents("#chart4");
 });
 
 const drawStacked = data => {

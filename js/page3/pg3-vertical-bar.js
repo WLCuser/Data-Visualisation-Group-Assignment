@@ -11,6 +11,8 @@ d3.csv("data/First-Nations-Age.csv", d => {
     drawAgeChart(data);
     registerChart("#chart3", data, drawAgeChart);
     populateFilters(data);
+    createTooltip("#chart3");
+    handleMouseEvents("#chart3");
 });
 
 const drawAgeChart = data => {

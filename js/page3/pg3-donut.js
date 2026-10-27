@@ -10,6 +10,8 @@ d3.csv("data/First-Nations-Counterparty.csv", d => {
     console.log(data);
     drawDonutChart(data);
     registerChart("#chart5", data, drawDonutChart);
+    createTooltip("#chart5");
+    handleMouseEvents("#chart5");
 });
 
 const drawDonutChart = data => {

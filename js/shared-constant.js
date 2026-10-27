@@ -3,3 +3,7 @@ const width = 800;
 const height = 400;
 const innerWidth = width - margin.left - margin.right;
 const innerHeight = height - margin.top - margin.bottom;
+
+const tooltipWidth = 100;
+const tooltipHeight = 32;
+const barColor = "black";

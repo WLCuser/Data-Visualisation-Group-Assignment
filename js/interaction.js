@@ -20,6 +20,9 @@ const updateCharts = () => {
 
         d3.select(chartId).select("svg").remove();
         draw(updatedData, selected.year);
+
+        createTooltip(chartId);
+        handleMouseEvents(chartId);
     });
 };
 
@@ -72,3 +75,91 @@ const populateFilters = (data) => {
     makeButtons("#filters_year", filters_year, "year");
     makeButtons("#filters_status", filters_status, "status");
 };
+
+const createTooltip = (chartId) => {
+
+    const innerChart = d3.select(`${chartId} svg g`);
+
+    const tooltip = innerChart
+        .append("g")
+        .attr("class", "tooltip")
+        .style("opacity", 0);
+
+    tooltip
+        .append("rect")
+        .attr("width", tooltipWidth)
+        .attr("height", tooltipHeight)
+        .attr("rx", 3)
+        .attr("ry", 3)
+        .attr("fill", barColor)
+        .attr("fill-opacity", 0.75);
+
+    tooltip
+        .append("text")
+        .text("NA")
+        .attr("x", tooltipWidth / 2)
+        .attr("y", tooltipHeight / 2 + 2)
+        .attr("text-anchor", "middle")
+        .attr("alignment-baseline", "middle")
+        .attr("fill", "white")
+        .style("font-weight", 900);
+}
+
+const handleMouseEvents = (chartId) => {
+
+    const innerChart = d3.select(`${chartId} svg g`);
+
+    // Which shape to hover on in each chart
+    const selector = chartId === "#chart1" ? "circle"
+                   : chartId === "#chart5" ? "path"
+                   : "rect";
+
+    innerChart.selectAll(selector)
+        .on("mouseenter", (e, d) => {
+            if (!d) return;   // skip shapes without data, such as legend squares
+
+            let text = "";
+            let x = 0;
+            let y = 0;
+
+            if (chartId === "#chart1") {                       // line chart
+                text = `${d.total}`;
+                x = Number(e.target.getAttribute("cx"));
+                y = Number(e.target.getAttribute("cy"));
+
+            } else if (chartId === "#chart2") {                // horizontal bars
+                text = `${d.total}`;
+                x = Number(e.target.getAttribute("x")) + Number(e.target.getAttribute("width"));
+                y = Number(e.target.getAttribute("y"));
+
+            } else if (chartId === "#chart3") {                // vertical bars
+                text = `${d.total}`;
+                x = Number(e.target.getAttribute("x")) + Number(e.target.getAttribute("width")) / 2;
+                y = Number(e.target.getAttribute("y"));
+
+            } else if (chartId === "#chart4") {                // stacked bars
+                text = `${d[1] - d[0]}`;
+                x = Number(e.target.getAttribute("x")) + Number(e.target.getAttribute("width")) / 2;
+                y = Number(e.target.getAttribute("y"));
+
+            } else if (chartId === "#chart5") {                // donut
+                text = `${d.data.total}`;
+                [x, y] = d3.pointer(e, innerChart.node());
+            }
+
+            innerChart.select(".tooltip text")
+                .text(text);
+
+            innerChart.select(".tooltip")
+                .attr("transform", `translate(${x - 0.5 * tooltipWidth}, ${y - 1.5 * tooltipHeight})`)
+                .transition()
+                .duration(200)
+                .style("opacity", 1);
+        })
+
+        .on("mouseleave", () => {
+            innerChart.select(".tooltip")
+                .style("opacity", 0)
+                .attr("transform", `translate(0,500)`);
+        });
+}
