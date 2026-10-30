@@ -64,3 +64,41 @@ nav a.active{
     color: white;
     font-weight: bold;
 }
+
+/* Filter rows matching leader's layout */
+div[id^="filters_"] {
+    padding: 8px 20px;
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+div[id^="filters_"] b {
+    margin-right: 10px;
+    min-width: 120px;
+}
+
+/* Button styling matching page3.html */
+.filter-btn {
+    padding: 5px 12px;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #334155;
+}
+
+.filter-btn:hover {
+    background: #e2e8f0;
+}
+
+.filter-btn.active {
+    background: #1d4ed8;
+    color: white;
+    border-color: #1d4ed8;
+}
