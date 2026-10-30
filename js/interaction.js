@@ -74,6 +74,8 @@ const populateFilters = (data) => {
 
     makeButtons("#filters_year", filters_year, "year");
     makeButtons("#filters_status", filters_status, "status");
+
+
 };
 
 const createTooltip = (chartId) => {
