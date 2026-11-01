@@ -37,27 +37,32 @@
 
     <!-- Main Initialization Script -->
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            d3.csv("data/national_traffic_clean.csv").then(function(data) {
-                data.forEach(d => {
-                    d['Calendar year'] = +d['Calendar year'];
-                    d['Hospitalisations'] = +d['Hospitalisations'];
-                });
+        let rawData = []; // Global master dataset
 
-                setupFilters(data, function(filteredData) {
-                    drawChart1(filteredData);
-                    drawChart2(filteredData);
-                    drawChart3(filteredData);
-                    drawChart4(filteredData);
-                });
-
-                // Initial render
-                drawChart1(data);
-                drawChart2(data);
-                drawChart3(data);
-                drawChart4(data);
+    document.addEventListener("DOMContentLoaded", function() {
+        d3.csv("data/national_traffic_clean.csv").then(function(data) {
+            data.forEach(d => {
+                d['Calendar year'] = +d['Calendar year'];
+                d['Hospitalisations'] = +d['Hospitalisations'];
             });
+
+            rawData = data; // Save to global scope!
+
+            setupFilters(rawData, function(filteredData) {
+                // Pass BOTH filteredData and rawData so charts know what is selected vs full background
+                drawChart1(filteredData, rawData);
+                drawChart2(filteredData);
+                drawChart3(filteredData);
+                drawChart4(filteredData);
+            });
+
+            // Initial render with full data
+            drawChart1(rawData, rawData);
+            drawChart2(rawData);
+            drawChart3(rawData);
+            drawChart4(rawData);
         });
+    });
     </script>
 </body>
 </html>
