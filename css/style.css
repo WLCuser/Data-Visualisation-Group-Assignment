@@ -41,6 +41,10 @@ nav a.active{
 }
 
 #filters_year,
+#filters_gender,
+#filters_roaduser,
+#filters_age,
+#filters_remoteness,
 #filters_status {
     display: flex;
     flex-wrap: wrap;
