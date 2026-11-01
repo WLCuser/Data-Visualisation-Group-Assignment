@@ -1,9 +1,10 @@
 body{
     margin:0;
+    background-color: aliceblue;
 }
 
 nav{
-    background-color: lightblue;
+    background-color: steelblue;
     text-align: center;
     padding: 24px 24px;
 }
@@ -16,13 +17,13 @@ nav a{
 }
 
 nav a:hover{
-    color:grey;
+    color:lightgray;
 }
 
 nav a.active{
-    color:black;
+    color:white;
     font-weight: bold;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
 }
 
 .container{
@@ -63,180 +64,4 @@ nav a.active{
     border-color: steelblue;
     color: white;
     font-weight: bold;
-}
-
-/* Filter rows matching leader's layout */
-div[id^="filters_"] {
-    padding: 8px 20px;
-    background: white;
-    border-bottom: 1px solid #e2e8f0;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    flex-wrap: wrap;
-}
-
-div[id^="filters_"] b {
-    margin-right: 10px;
-    min-width: 120px;
-}
-
-/* Button styling matching page3.html */
-.filter-btn {
-    padding: 5px 12px;
-    background: #f8fafc;
-    border: 1px solid #cbd5e1;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 13px;
-    color: #334155;
-}
-
-.filter-btn:hover {
-    background: #e2e8f0;
-}
-
-.filter-btn.active {
-    background: #1d4ed8;
-    color: white;
-    border-color: #1d4ed8;
-}
-
-/* Make filter rows look modern and neatly aligned */
-div[id^="filters_"] {
-    padding: 10px 24px;
-    background: #ffffff;
-    border-bottom: 1px solid #e2e8f0;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-}
-
-div[id^="filters_"] b {
-    min-width: 130px;
-    color: #1e293b;
-    font-weight: 600;
-}
-
-/* Beautiful rounded filter buttons with smooth transitions */
-.filter-btn {
-    padding: 6px 14px;
-    background: #f1f5f9;
-    border: 1px solid #cbd5e1;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 13px;
-    color: #334155;
-    transition: all 0.2s ease;
-}
-
-.filter-btn:hover {
-    background: #e2e8f0;
-    border-color: #94a3b8;
-}
-
-.filter-btn.active {
-    background: #2563eb;
-    color: white;
-    border-color: #2563eb;
-    font-weight: 500;
-    box-shadow: 0 1px 2px rgba(37, 99, 235, 0.2);
-}
-
-/* Clean modern filter alignment matching page2 */
-div[id^="filters_"] {
-    padding: 12px 24px;
-    background: #ffffff;
-    border-bottom: 1px solid #e2e8f0;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-div[id^="filters_"] b {
-    min-width: 140px;
-    color: #1e293b;
-    font-weight: 600;
-}
-
-.filter-btn {
-    padding: 6px 14px;
-    background: #f8fafc;
-    border: 1px solid #cbd5e1;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 13px;
-    color: #334155;
-    transition: all 0.2s ease;
-}
-
-.filter-btn:hover {
-    background: #e2e8f0;
-}
-
-.filter-btn.active {
-    background: #2563eb;
-    color: white;
-    border-color: #2563eb;
-    font-weight: 500;
-}
-
-/* Larger chart cards matching teammate's size */
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    padding: 24px;
-}
-
-.container > div {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    min-height: 380px;
-}
-
-/* Tooltip styling */
-.d3-tip {
-    position: absolute;
-    background: rgba(15, 23, 42, 0.9);
-    color: #fff;
-    padding: 6px 10px;
-    font-size: 12px;
-    border-radius: 4px;
-    pointer-events: none;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    z-index: 10;
-}
-
-
-/* Inactive filter buttons matching your group mate's style */
-.filter-btn {
-    padding: 6px 14px;
-    background: #ffffff;
-    border: 1px solid #cbd5e1;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 13px;
-    color: #334155;
-    transition: all 0.2s ease;
-}
-
-.filter-btn:hover {
-    background: #f1f5f9;
-    border-color: #94a3b8;
-}
-
-/* Active filter button matching your group mate's exact steel-blue color */
-.filter-btn.active {
-    background: #4682b4; /* Classic steel-blue matching group mate's page */
-    color: white;
-    border-color: #4682b4;
-    font-weight: 500;
 }

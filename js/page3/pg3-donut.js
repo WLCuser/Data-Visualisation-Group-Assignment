@@ -85,6 +85,8 @@ const drawDonutChart = data => {
         .attr("stroke", "white")
         .attr("stroke-width", 2);
 
+    const grandTotal = d3.sum(innerData, d => d.total);
+
     // Inner ring labels (skip very small slices)
     innerChart
         .append("g")
@@ -95,7 +97,7 @@ const drawDonutChart = data => {
         .attr("transform", d => `translate(${innerArc.centroid(d)})`)
         .attr("text-anchor", "middle")
         .style("font-size", "10px")
-        .text(d => (d.endAngle - d.startAngle > 0.3 ? d.data.counterparty : ""));
+        .text(d => (d.endAngle - d.startAngle > 0.3 ? d3.format(".1%")(d.data.total / grandTotal) : ""));
 
     // Outer ring: split by status within each counterparty
     innerChart
@@ -108,6 +110,23 @@ const drawDonutChart = data => {
         .attr("fill", d => statusColor(d.data.status))
         .attr("stroke", "white")
         .attr("stroke-width", 2);
+
+    // Centre of the donut: overall total
+    innerChart
+        .append("text")
+        .attr("text-anchor", "middle")
+        .attr("y", -2)
+        .style("font-size", "16px")
+        .style("font-weight", "bold")
+        .text(d3.format(",")(grandTotal));
+
+    innerChart
+        .append("text")
+        .attr("text-anchor", "middle")
+        .attr("y", 14)
+        .style("font-size", "11px")
+        .text("cases");
+    
 
     // Legend 1: counterparty (inner ring), top left
     const counterpartyLegend = svg
