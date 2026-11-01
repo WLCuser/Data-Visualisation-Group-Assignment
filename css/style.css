@@ -69,3 +69,14 @@ nav a.active{
     color: white;
     font-weight: bold;
 }
+
+.d3-tip {
+    position: absolute;
+    pointer-events: none;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+}
