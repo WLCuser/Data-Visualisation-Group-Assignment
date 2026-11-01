@@ -42,7 +42,7 @@ function createButtons(selector, key, values, data, callback) {
         .enter()
         .append("button")
         .text(d => d)
-        .attr("class", d => `filter-btn ${d === 'All' ? 'active' : ''}`)
+        .attr("class", d => `filter ${d === 'All' ? 'active' : ''}`)
         .on("click", function(event, d) {
             btnContainer.selectAll("button").classed("active", false);
             d3.select(this).classed("active", true);
