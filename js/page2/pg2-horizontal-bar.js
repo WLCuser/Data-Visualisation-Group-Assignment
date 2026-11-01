@@ -63,45 +63,54 @@ const drawBarChart = data => {
         .append("g")
         .attr("transform", `translate(${margin.left},${margin.top})`);
 
+    // Stack order: first key is at the left; also the legend order
+    const states = ["NSW", "Vic", "Qld", "WA", "SA", "Tas", "ACT", "NT"];
+
     // Total hospitalisations per road user per state (all years added together)
-    const totals = d3.rollups(
+    const nested = d3.rollup(
         data,
         v => d3.sum(v, d => d.Hospitalisations),
         d => d.RoadUser,
         d => d.state
-    ).flatMap(([RoadUser, values]) =>
-        values.map(([state, total]) => ({ RoadUser, state, total }))
     );
 
-    // Road users ordered by overall total, largest first
-    const roadUserOrder = d3.rollups(
-        totals,
-        v => d3.sum(v, d => d.total),
-        d => d.RoadUser
-    )
-        .sort((a, b) => d3.descending(a[1], b[1]))
-        .map(d => d[0]);
+    // Wide format: one row per road user, one column per state; largest total first
+    const wideData = Array.from(nested, ([RoadUser, byState]) => {
+        const row = { RoadUser };
+        states.forEach(s => {
+            row[s] = byState.get(s) ?? 0;
+        });
+        row.total = d3.sum(states, s => row[s]);
+        return row;
+    }).sort((a, b) => d3.descending(a.total, b.total));
 
-    // Domain order controls bar order within each group and legend order
+    // Stack the states
+    const stackedData = d3.stack().keys(states)(wideData);   // one series per state
+
+    // One object per segment. Each has a "total" field, because the shared tooltip code reads d.total.
+    const segments = stackedData.flatMap(series =>
+        series.map(d => ({
+            RoadUser: d.data.RoadUser,
+            state: series.key,
+            x0: d[0],
+            x1: d[1],
+            total: d[1] - d[0]
+        }))
+    );
+
     const color = d3.scaleOrdinal()
-        .domain(["NSW", "Vic", "Qld", "WA", "SA", "Tas", "ACT", "NT"])
+        .domain(states)
         .range(d3.schemeTableau10.slice(0, 8));
 
-    // Outer band (vertical): one slot per road user
+    // One band per road user, with room between the bars
     const yScale = d3.scaleBand()
-        .domain(roadUserOrder)
+        .domain(wideData.map(d => d.RoadUser))
         .range([0, innerHeight])
-        .paddingInner(0.1);
+        .padding(0.25);
 
-    // Inner band (vertical): one slot per state inside each road user slot
-    const ySubScale = d3.scaleBand()
-        .domain(color.domain())
-        .range([0, yScale.bandwidth()])
-        .padding(0.1);
-
-    // Values run left to right
+    // Values run left to right, up to the longest stack (plus room for its total label)
     const xScale = d3.scaleLinear()
-        .domain([0, d3.max(totals, d => d.total)])
+        .domain([0, d3.max(wideData, d => d.total) * 1.12])
         .nice()
         .range([0, innerWidth]);
 
@@ -134,23 +143,38 @@ const drawBarChart = data => {
         .attr("y", -10)
         .attr("text-anchor", "start");
 
-    // Bars
+    // Stacked bars: one rect per road user per state
     innerChart
         .selectAll("rect")
-        .data(totals)
+        .data(segments)
         .join("rect")
-        .attr("x", 0)
-        .attr("y", d => yScale(d.RoadUser) + ySubScale(d.state))
-        .attr("width", d => xScale(d.total))
-        .attr("height", ySubScale.bandwidth())
-        .attr("fill", d => color(d.state));
+        .attr("x", d => xScale(d.x0))
+        .attr("y", d => yScale(d.RoadUser))
+        .attr("width", d => xScale(d.x1) - xScale(d.x0))
+        .attr("height", yScale.bandwidth())
+        .attr("fill", d => color(d.state))
+        .attr("stroke", "white")
+        .attr("stroke-width", 0.5);
+
+    // Total for each road user at the end of its bar
+    innerChart
+        .selectAll("text.total-label")
+        .data(wideData)
+        .join("text")
+        .attr("class", "total-label")
+        .attr("x", d => xScale(d.total) + 5)
+        .attr("y", d => yScale(d.RoadUser) + yScale.bandwidth() / 2)
+        .attr("dy", "0.35em")
+        .attr("fill", "currentColor")
+        .style("font-size", "11px")
+        .text(d => d3.format(",")(d.total));
 
     // Legend (bottom right of the chart area, where the bars are short)
     const legend = innerChart
         .append("g")
         .attr("transform", `translate(${innerWidth - 90}, ${innerHeight - 140})`);
 
-    color.domain().forEach((state, i) => {
+    states.forEach((state, i) => {
         const legendRow = legend
             .append("g")
             .attr("transform", `translate(0, ${i * 16})`);
