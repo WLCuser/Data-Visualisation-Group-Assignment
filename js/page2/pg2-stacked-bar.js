@@ -1,8 +1,9 @@
-d3.csv("data/state-and-territory-hospitalisation-injury-agegroup.csv", d => {
+d3.csv("data/state-and-territory-hospitalisation-injury-clean.csv", d => {
+    if (d["Breakdown type"] !== "age group") return null;
     return {
         year: +d["calendar year"],
         state: d["state or territory"],
-        ageGroup: d["age group"],
+        ageGroup: d["Breakdown value"],
         Hospitalisations: +d["count of cases excluding died in hospitals within 30 days"],
         BedDays: +d["bed days excluding died in hospitals within 30 days"]
     };

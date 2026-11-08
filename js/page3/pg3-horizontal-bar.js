@@ -1,8 +1,9 @@
-d3.csv("data/First-Nations-Roaduser.csv", d => {
+d3.csv("data/First-Nations-hospitalised-injuries-clean.csv", d => {
+    if (d["Breakdown type"] !== "road user") return null;
     return {
         year: +d["Calendar year"],
         status: d["First Nations status"],
-        RoadUser: d["Road user"],
+        RoadUser: d["Breakdown value"],
         Hospitalisations: +d.Hospitalisations,
         BedDays: +d["Bed days excluding died in hospitals within 30 days"]
     };

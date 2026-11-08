@@ -1,4 +1,5 @@
-d3.csv("data/state-and-territory-hospitalisation-injury-annual.csv", d => {
+d3.csv("data/state-and-territory-hospitalisation-injury-clean.csv", d => {
+    if (d["Breakdown type"] !== "All") return null;
     return {
         year: +d["calendar year"],
         period: d["6-monthly"],
