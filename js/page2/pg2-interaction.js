@@ -2,62 +2,75 @@
 const charts = [];
 
 // Current selection
-// NEW: "state" is the State or territory filter. It stays "all" on pages without state
-// buttons, so it never changes what the First Nations charts show.
+// NEW: "state" is the State or territory filter. It stays "all" on pages without the
+// state dropdown, so it never changes what the First Nations charts show.
 const selected = { year: "all", status: "all", state: "all" };
 
-// NEW: builds the "Calendar year" and "State or territory" button rows by itself, the first
+// NEW: builds the "Calendar year" and "State or territory" dropdown boxes by itself, the first
 // time a chart registers data that has a "state" field (the State and Territory page).
-// Pages whose data has no "state" field, such as the First Nations page, skip all of this.
+// Pages whose data has no "state" field, such as the First Nations page, skip all of this
+// and keep using populateFilters and their buttons exactly as before.
 let stateFiltersBuilt = false;
 
 const buildStateFilters = (data) => {
     if (stateFiltersBuilt || !data.length || data[0].state === undefined) return;
     stateFiltersBuilt = true;
 
-    // Button looks come from the page's own .filter / .active CSS if it has any.
-    // The :where() rules are only a fallback: they have zero specificity, so the page's CSS wins.
+    // Layout and a plain look for the dropdowns. The :where() rules are only a fallback:
+    // they have zero specificity, so any CSS the page already has for these wins.
     if (!document.querySelector("#auto-filter-style")) {
         const style = document.createElement("style");
         style.id = "auto-filter-style";
         style.textContent = `
-            .auto-filters { margin: 12px 16px 0; }
-            .auto-filters .filter-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
-            :where(.auto-filters .filter) { padding: 6px 14px; margin: 0 6px 4px 0; border: 1px solid #ccc; border-radius: 4px; background: white; cursor: pointer; }
-            :where(.auto-filters .filter.active) { background: #3a8fd9; border-color: #3a8fd9; color: white; }
+            .auto-filters { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 28px; margin: 12px 16px 0; }
+            .auto-filters label { display: flex; align-items: center; gap: 10px; font-weight: bold; }
+            :where(.auto-filters select) { padding: 6px 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; background: white; cursor: pointer; }
         `;
         document.head.appendChild(style);
     }
 
+    // Options: an "all" choice first, then the years and the states found in the data
+    const years = [...new Set(data.map(d => d.year))].sort((a, b) => a - b);
+    const states = [...new Set(data.map(d => d.state))];
+
     const block = document.createElement("div");
     block.className = "auto-filters";
+    block.innerHTML = `
+        <label>Calendar year:
+            <select id="year_select">
+                <option value="all">All</option>
+                ${years.map(y => `<option value="${y}">${y}</option>`).join("")}
+            </select>
+        </label>
+        <label>State or territory:
+            <select id="state_select">
+                <option value="all">All states</option>
+                ${states.map(s => `<option value="${s}">${s}</option>`).join("")}
+            </select>
+        </label>
+    `;
 
-    // Add a row only if the page does not already have a container with that id
-    const addRow = (id, label) => {
-        if (document.querySelector(`#${id}`)) return;
-        const row = document.createElement("div");
-        row.className = "filter-row";
-        row.innerHTML = `<strong>${label}</strong><div id="${id}"></div>`;
-        block.appendChild(row);
-    };
+    // Put the dropdowns just above the charts: find the element that holds both chart 1 and chart 2
+    let anchor = document.querySelector("#chart1");
+    const other = document.querySelector("#chart2");
+    while (anchor && other && !anchor.contains(other)) anchor = anchor.parentElement;
 
-    addRow("filters_year", "Calendar year:");
-    addRow("filters_state", "State or territory:");
-
-    if (block.children.length) {
-        // Put the rows just above the charts: find the element that holds both chart 1 and chart 2
-        let anchor = document.querySelector("#chart1");
-        const other = document.querySelector("#chart2");
-        while (anchor && other && !anchor.contains(other)) anchor = anchor.parentElement;
-
-        if (!anchor || anchor === document.body || anchor === document.documentElement) {
-            document.body.prepend(block);
-        } else {
-            anchor.parentNode.insertBefore(block, anchor);
-        }
+    if (!anchor || anchor === document.body || anchor === document.documentElement) {
+        document.body.prepend(block);
+    } else {
+        anchor.parentNode.insertBefore(block, anchor);
     }
 
-    populateFilters(data);
+    // Choosing an option updates the selection and redraws every chart
+    d3.select("#year_select").on("change", e => {
+        selected.year = e.target.value === "all" ? "all" : +e.target.value;   // years are numbers in the data
+        updateCharts();
+    });
+
+    d3.select("#state_select").on("change", e => {
+        selected.state = e.target.value;
+        updateCharts();
+    });
 };
 
 // filterYear = false: the year filter dims points instead of removing rows (line chart)
@@ -132,18 +145,6 @@ const populateFilters = (data) => {
 
     makeButtons("#filters_year", filters_year, "year");
     makeButtons("#filters_status", filters_status, "status");
-
-    // NEW: State or territory buttons. Only built on a page that has a #filters_state
-    // container, and the data needs a "state" field, so the First Nations page is not affected.
-    if (!d3.select("#filters_state").empty()) {
-        const filters_state = [
-            { id: "all", label: "All states", isActive: true },
-            ...[...new Set(data.map(d => d.state))]
-                .map(s => ({ id: s, label: s, isActive: false }))
-        ];
-
-        makeButtons("#filters_state", filters_state, "state");
-    }
 };
 
 const createTooltip = (chartId) => {
