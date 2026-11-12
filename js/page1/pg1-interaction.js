@@ -18,39 +18,32 @@ function setupFilters(data, callback) {
 
     const remoteness = ['All', ...new Set(data.map(d => d['ABS remoteness area'])).values()].filter(Boolean);
 
-    createButtons('#filters_year', 'year', years, data, callback);
-    createButtons('#filters_gender', 'gender', genders, data, callback);
-    createButtons('#filters_roaduser', 'roaduser', roadUsers, data, callback);
-    createButtons('#filters_age', 'age', ages, data, callback);
-    createButtons('#filters_remoteness', 'remoteness', remoteness, data, callback);
+    createDropdown('#filters_year', 'year', years, data, callback);
+    createDropdown('#filters_gender', 'gender', genders, data, callback);
+    createDropdown('#filters_roaduser', 'roaduser', roadUsers, data, callback);
+    createDropdown('#filters_age', 'age', ages, data, callback);
+    createDropdown('#filters_remoteness', 'remoteness', remoteness, data, callback);
 }
 
-function createButtons(selector, key, values, data, callback) {
+function createDropdown(selector, key, values, data, callback) {
     const container = d3.select(selector);
-    const labelText = container.select("b").text() || `${key}:`;
+    const labelText = container.select("b").text();
     container.html(`<b>${labelText} </b>`);
 
-    // Wrap buttons in a flex container so long lists (like Road user) wrap neatly
-    const btnContainer = container.append("div")
-        .style("display", "flex")
-        .style("flex-wrap", "wrap")
-        .style("gap", "6px")
-        .style("flex", "1");
-
-    btnContainer.selectAll("button")
-        .data(values)
-        .enter()
-        .append("button")
-        .text(d => d)
-        .attr("class", d => `filter ${d === 'All' ? 'active' : ''}`)
-        .on("click", function(event, d) {
-            btnContainer.selectAll("button").classed("active", false);
-            d3.select(this).classed("active", true);
-            activeFilters[key] = d;
-            
+    const select = container.append("select")
+        .attr("class", "filter-dropdown")
+        .on("change", function() {
+            activeFilters[key] = this.value;
             const filtered = getFilteredData(data);
             callback(filtered);
         });
+
+    select.selectAll("option")
+        .data(values)
+        .enter()
+        .append("option")
+        .text(d => d)
+        .attr("value", d => d);
 }
 
 function getFilteredData(rawData) {
