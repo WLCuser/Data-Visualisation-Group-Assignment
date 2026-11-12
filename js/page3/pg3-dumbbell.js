@@ -9,8 +9,8 @@ d3.csv("data/First-Nations-hospitalised-injuries-clean.csv", d => {
     };
 }).then(data => {
     console.log(data);
-    drawBarChart(data);
-    registerChart("#chart2", data, drawBarChart);
+    drawDumbbellChart(data);
+    registerChart("#chart2", data, drawDumbbellChart);
     createTooltip("#chart2");
     handleMouseEvents("#chart2");
 });
@@ -49,9 +49,8 @@ const wrapLabels = (selection, maxWidth) => {
     });
 };
 
-const drawBarChart = data => {
+const drawDumbbellChart = data => {
 
-    // Margins for this chart only (does not change the shared margin)
     const margin = { top: 40, right: 30, bottom: 60, left: 100 };
     const innerWidth = width - margin.left - margin.right;
     const innerHeight = height - margin.top - margin.bottom;
@@ -74,47 +73,53 @@ const drawBarChart = data => {
         values.map(([RoadUser, total]) => ({ status, RoadUser, total }))
     );
 
-    // Domain order controls bar order and legend order
+    // Convert to % share of each group's own total
+    const statusTotals = d3.rollup(totals, v => d3.sum(v, d => d.total), d => d.status);
+    const shares = totals.map(d => ({
+        ...d,
+        share: (d.total / statusTotals.get(d.status)) * 100
+    }));
+
+    // One row per road user, biggest share on top
+    const rows = d3.groups(shares, d => d.RoadUser)
+        .map(([RoadUser, values]) => ({
+            RoadUser,
+            min: d3.min(values, d => d.share),
+            max: d3.max(values, d => d.share)
+        }))
+        .sort((a, b) => b.max - a.max);
+
     const color = d3.scaleOrdinal()
         .domain(["Non-Indigenous", "First Nations people"])
         .range(["steelblue", "green"]);
 
-    // Outer band (vertical): one slot per road user
     const yScale = d3.scaleBand()
-        .domain(totals.map(d => d.RoadUser))
+        .domain(rows.map(d => d.RoadUser))
         .range([0, innerHeight])
         .paddingInner(0.2);
 
-    // Inner band (vertical): one slot per status inside each road user slot
-    const ySubScale = d3.scaleBand()
-        .domain(color.domain())
-        .range([0, yScale.bandwidth()])
-        .padding(0.05);
-
-    // Values run left to right
     const xScale = d3.scaleLinear()
-        .domain([0, d3.max(totals, d => d.total)])
+        .domain([0, d3.max(shares, d => d.share)])
         .nice()
         .range([0, innerWidth]);
 
-    const bottomAxis = d3.axisBottom(xScale);
-    const leftAxis = d3.axisLeft(yScale);
+    const cy = RoadUser => yScale(RoadUser) + yScale.bandwidth() / 2;
 
     innerChart
         .append("g")
         .attr("transform", `translate(0,${innerHeight})`)
-        .call(bottomAxis);
+        .call(d3.axisBottom(xScale).tickFormat(d => d + "%"));
 
     innerChart
         .append("g")
-        .call(leftAxis)
+        .call(d3.axisLeft(yScale))
         .selectAll(".tick text")
         .call(wrapLabels, margin.left - 20);
 
     // Axis labels
     innerChart
         .append("text")
-        .text("Hospitalisations")
+        .text("Percentage of group's hospitalisations (%)")
         .attr("x", innerWidth)
         .attr("y", innerHeight + margin.bottom - 10)
         .attr("text-anchor", "end");
@@ -122,22 +127,47 @@ const drawBarChart = data => {
     innerChart
         .append("text")
         .text("Road User")
-        .attr("x", -margin.left+50)
+        .attr("x", -margin.left + 50)
         .attr("y", -10)
         .attr("text-anchor", "start");
 
-    // Bars
+    // Faint guide line across each row
     innerChart
-        .selectAll("rect")
-        .data(totals)
-        .join("rect")
-        .attr("x", 0)
-        .attr("y", d => yScale(d.RoadUser) + ySubScale(d.status))
-        .attr("width", d => xScale(d.total))
-        .attr("height", ySubScale.bandwidth())
+        .selectAll("line.guide")
+        .data(rows)
+        .join("line")
+        .attr("class", "guide")
+        .attr("x1", 0)
+        .attr("x2", innerWidth)
+        .attr("y1", d => cy(d.RoadUser))
+        .attr("y2", d => cy(d.RoadUser))
+        .attr("stroke", "#ddd");
+
+    // Connector between the two groups
+    innerChart
+        .selectAll("line.connector")
+        .data(rows)
+        .join("line")
+        .attr("class", "connector")
+        .attr("x1", d => xScale(d.min))
+        .attr("x2", d => xScale(d.max))
+        .attr("y1", d => cy(d.RoadUser))
+        .attr("y2", d => cy(d.RoadUser))
+        .attr("stroke", "#999")
+        .attr("stroke-width", 3);
+
+    // Dots (one per group per road user)
+    innerChart
+        .selectAll("circle.dot")
+        .data(shares)
+        .join("circle")
+        .attr("class", "dot")
+        .attr("cx", d => xScale(d.share))
+        .attr("cy", d => cy(d.RoadUser))
+        .attr("r", 6)
         .attr("fill", d => color(d.status));
 
-    // Legend (bottom right of the chart area, where the bars are short)
+    // Legend
     const legend = innerChart
         .append("g")
         .attr("transform", `translate(${innerWidth - 160}, ${innerHeight - 50})`);
@@ -147,14 +177,15 @@ const drawBarChart = data => {
             .append("g")
             .attr("transform", `translate(0, ${i * 20})`);
 
-        legendRow.append("rect")
-            .attr("width", 10)
-            .attr("height", 10)
+        legendRow.append("circle")
+            .attr("cx", 5)
+            .attr("cy", 5)
+            .attr("r", 5)
             .attr("fill", color(status));
 
         legendRow.append("text")
             .attr("x", 20)
-            .attr("y", 10)
+            .attr("y", 5)
             .attr("text-anchor", "start")
             .attr("fill", "currentColor")
             .style("alignment-baseline", "middle")

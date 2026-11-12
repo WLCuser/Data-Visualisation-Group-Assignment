@@ -119,13 +119,13 @@ const handleMouseEvents = (chartId) => {
     const innerChart = d3.select(`${chartId} svg g`);
 
     // Which shape to hover on in each chart
-    const selector = chartId === "#chart1" ? "circle"
+    const selector = chartId === "#chart1" || chartId === "#chart2" ? "circle"
                    : chartId === "#chart5" ? "path"
                    : "rect";
 
     innerChart.selectAll(selector)
         .on("mouseenter", (e, d) => {
-            if (!d) return;   // skip shapes without data, such as legend squares
+            if (!d) return;   // skip shapes without data, such as legend items
 
             let text = "";
             let x = 0;
@@ -136,10 +136,10 @@ const handleMouseEvents = (chartId) => {
                 x = Number(e.target.getAttribute("cx"));
                 y = Number(e.target.getAttribute("cy"));
 
-            } else if (chartId === "#chart2") {                // horizontal bars
-                text = `${d.total}`;
-                x = Number(e.target.getAttribute("x")) + Number(e.target.getAttribute("width"));
-                y = Number(e.target.getAttribute("y"));
+            } else if (chartId === "#chart2") {                // dumbbell
+                text = `${d.share.toFixed(1)}%`;
+                x = Number(e.target.getAttribute("cx"));
+                y = Number(e.target.getAttribute("cy"));
 
             } else if (chartId === "#chart3") {                // vertical bars
                 text = `${d.total}`;
@@ -171,4 +171,4 @@ const handleMouseEvents = (chartId) => {
                 .style("opacity", 0)
                 .attr("transform", `translate(0,500)`);
         });
-}
+};
