@@ -3,21 +3,25 @@ body{
     background-color: aliceblue;
 }
 
-header{
+header {
     background-color: steelblue;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
     align-items: center;
+    height: 120px;
 }
 
-header h1{
+header h1 {
     color: white;
+    margin: 0;
+    font-size: 28px;
+    text-align: center;
 }
 
-header img{
-    width: 450px;
-    height: auto;
-    margin: 20px 0px 20px 50px;
+header img {
+    height: 80px;
+    width: auto;
+    margin: 20px 0 20px 50px;
 }
 
 nav{
@@ -86,4 +90,3 @@ nav a.active{
     font-size: 12px;
     opacity: 0;
 }
-

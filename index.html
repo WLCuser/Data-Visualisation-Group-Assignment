@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Dashboard</title>
     <!-- Use isolated page1 CSS so it formats only your page without affecting teammates -->
-    <link rel="stylesheet" href="css/page1.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body id="page1-body">
     <!-- Header matching your groupmate's exact structure -->
@@ -12,7 +11,7 @@
     <header>
         <a href="index.html"><img src="img/logo-white.png" alt="Logo"></a>
         <h1>National hospitalised injuries from road crash</h1>
-        <h1 id="year_title">2011 - 2021</h1>
+        <h1 id="year_title" style="text-align: end; margin-right: 50px;">2011 - 2021</h1>
     </header>
 
     <nav>
@@ -21,9 +20,8 @@
         <a href="page3.html">First Nations Peoples hospitalised injury counts</a>
     </nav>
 
-    <div id="page1-container">
         <!-- Horizontal Filter Bar (All dropdowns side by side) -->
-        <div class="filters-row">
+        <div class="filters">
             <div class="filter-group" id="filters_year"><b>Calendar year:</b></div>
             <div class="filter-group" id="filters_gender"><b>Gender:</b></div>
             <div class="filter-group" id="filters_roaduser"><b>Road user:</b></div>
@@ -32,13 +30,12 @@
         </div>
 
         <!-- 4 Chart Cards Grid -->
-        <div class="charts-grid">
+        <div class="container">
             <div id="chart1" class="chart-card"></div>
             <div id="chart2" class="chart-card"></div>
             <div id="chart3" class="chart-card"></div>
             <div id="chart4" class="chart-card"></div>
         </div>
-    </div>
 
     <!-- Scripts -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
