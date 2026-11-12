@@ -3,13 +3,32 @@ body{
     background-color: aliceblue;
 }
 
-nav{
+header{
     background-color: steelblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+header h1{
+    color: white;
+}
+
+header img{
+    width: 450px;
+    height: auto;
+    margin: 20px 0px 20px 50px;
+}
+
+nav{
     text-align: center;
-    padding: 24px 24px;
+    padding: 15px 10px;
 }
 
 nav a{
+    background-color: steelblue;
+    padding: 8px 16px;
+    border-radius: 999px;
     text-decoration: none;
     color: aliceblue;
     font-size: 20px;
@@ -40,34 +59,21 @@ nav a.active{
     margin: 5px 5px;
 }
 
-#filters_year,
-#filters_gender,
-#filters_roaduser,
-#filters_age,
-#filters_remoteness,
-#filters_status {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 6px;
-    margin: 8px 8px;
-}
-
-.filter {
-    padding: 6px 12px;
-    border: 1px solid #999;
+.filter-select {
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    background: white;
-    color: #333;
+    background: #fff;
     cursor: pointer;
-    font-size: 13px;
 }
 
-.filter.active {
-    background: steelblue;
-    border-color: steelblue;
-    color: white;
-    font-weight: bold;
+.filters {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 16px;         /* same space on all four sides */
 }
 
 .d3-tip {

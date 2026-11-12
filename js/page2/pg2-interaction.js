@@ -73,14 +73,29 @@ const buildStateFilters = (data) => {
     });
 };
 
+// Header text: the chosen year, or the full range of years in the data
+const updateYearTitle = () => {
+    let text = selected.year;
+
+    if (selected.year === "all") {
+        const years = charts.flatMap(c => c.data.map(d => d.year));
+        text = years.length ? `${d3.min(years)} - ${d3.max(years)}` : "";
+    }
+
+    d3.select("#year_title").text(text);
+};
+
 // filterYear = false: the year filter dims points instead of removing rows (line chart)
 const registerChart = (chartId, data, draw, filterYear = true) => {
     charts.push({ chartId, data, draw, filterYear });
     buildStateFilters(data);   // NEW: does nothing unless the data has a "state" field
+    updateYearTitle();
 };
 
 // Replaces your updateHistogram: filter each chart's data, remove its svg, draw it again
 const updateCharts = () => {
+    updateYearTitle();
+    
     charts.forEach(({ chartId, data, draw, filterYear }) => {
 
         const updatedData = data.filter(d =>

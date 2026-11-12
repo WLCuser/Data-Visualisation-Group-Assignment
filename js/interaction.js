@@ -9,8 +9,22 @@ const registerChart = (chartId, data, draw, filterYear = true) => {
     charts.push({ chartId, data, draw, filterYear });
 };
 
+const updateYearTitle = () => {
+    let text = selected.year;
+
+    if (selected.year === "all") {
+        const years = charts.flatMap(c => c.data.map(d => d.year));
+        text = years.length ? `${d3.min(years)}–${d3.max(years)}` : "All years";
+    }
+
+    d3.select("#year_title").text(text);
+};
+
 // Replaces your updateHistogram: filter each chart's data, remove its svg, draw it again
 const updateCharts = () => {
+
+    updateYearTitle();
+
     charts.forEach(({ chartId, data, draw, filterYear }) => {
 
         const updatedData = data.filter(d =>
@@ -28,54 +42,47 @@ const updateCharts = () => {
 
 const populateFilters = (data) => {
 
-    // Replaces filters_screen: built from the data, plus an "all" option
     const filters_year = [
-        { id: "all", label: "All", isActive: true },
+        { id: "all", label: "All" },
         ...[...new Set(data.map(d => d.year))]
             .sort((a, b) => a - b)
-            .map(y => ({ id: y, label: String(y), isActive: false }))
+            .map(y => ({ id: y, label: String(y) }))
     ];
 
     const filters_status = [
-        { id: "all", label: "Both", isActive: true },
+        { id: "all", label: "Both" },
         ...[...new Set(data.map(d => d.status))]
-            .map(s => ({ id: s, label: s, isActive: false }))
+            .map(s => ({ id: s, label: s }))
     ];
 
-    // Your original button code, written once and used for both groups
-    const makeButtons = (containerId, filters, key) => {
+    const makeDropdown = (containerId, filters, key) => {
 
-        d3.select(containerId)
-            .selectAll(".filter")
-            .data(filters)
-            .join("button")
-            .attr("class", d => `filter ${d.isActive ? "active" : ""}`)
-            .text(d => d.label)
+        // One <select> per container (join avoids duplicates if this runs twice)
+        const select = d3.select(containerId)
+            .selectAll("select")
+            .data([null])
+            .join("select")
+            .attr("class", "filter-select")
+            .on("change", function () {
+                // Use the bound datum instead of the option's string value,
+                // so numeric years keep their type (d.year === selected.year)
+                const d = filters[this.selectedIndex];
 
-            .on("click", (e, d) => {
-
-                //If the clicked filter is not already active, update the active state of the filters
-                if (!d.isActive) {
-                    filters.forEach(filter => {
-                        filter.isActive = d.id === filter.id ? true : false;
-                    });
-
-                    //Update the filter buttons based on which one was clicked
-                    d3.selectAll(`${containerId} .filter`)
-                        .classed("active", filter => filter.id === d.id ? true : false);
-
-                    console.log("Clicked filter data:", d);
-
-                    selected[key] = d.id;
-                    updateCharts();
-                }
+                selected[key] = d.id;
+                console.log("Selected filter:", d);
+                updateCharts();
             });
+
+        // One <option> per filter
+        select.selectAll("option")
+            .data(filters)
+            .join("option")
+            .attr("value", d => d.id)
+            .text(d => d.label);
     };
 
-    makeButtons("#filters_year", filters_year, "year");
-    makeButtons("#filters_status", filters_status, "status");
-
-
+    makeDropdown("#filters_year", filters_year, "year");
+    makeDropdown("#filters_status", filters_status, "status");
 };
 
 const createTooltip = (chartId) => {
