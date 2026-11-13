@@ -90,8 +90,8 @@ const drawDumbbellChart = data => {
         .sort((a, b) => b.max - a.max);
 
     const color = d3.scaleOrdinal()
-        .domain(["Non-Indigenous", "First Nations people"])
-        .range(["steelblue", "green"]);
+        .domain(["First Nations people","Non-Indigenous"])
+        .range(colorSafe10);
 
     const yScale = d3.scaleBand()
         .domain(rows.map(d => d.RoadUser))

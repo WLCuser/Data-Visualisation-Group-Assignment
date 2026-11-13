@@ -37,7 +37,7 @@ const drawAgeChart = data => {
 
     const color = d3.scaleOrdinal()
         .domain(["First Nations people", "Non-Indigenous"])
-        .range(["green", "steelblue"]);
+        .range(colorSafe10);
 
     // Outer band: one slot per age group (in natural age order)
     const xScale = d3.scaleBand()

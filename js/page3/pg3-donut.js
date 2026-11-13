@@ -45,11 +45,11 @@ const drawDonutChart = data => {
     // Colors
     const counterpartyColor = d3.scaleOrdinal()
         .domain(innerData.map(d => d.counterparty))
-        .range(d3.schemeSet2);
+        .range(colorSafe5);
 
     const statusColor = d3.scaleOrdinal()
         .domain(statuses)
-        .range(["green", "steelblue"]);
+        .range(colorSafe10);
 
     // Same pie settings for both rings, so the angles line up
     const pie = d3.pie()

@@ -50,7 +50,7 @@ const drawLineChart = (data, selectedYear = "all") => {
 
     const color = d3.scaleOrdinal()
         .domain(["First Nations people", "Non-Indigenous"])
-        .range(["green", "steelblue"]);
+        .range(colorSafe10);
 
     const bottomAxis = d3.axisBottom(xScale)
         .ticks(11)

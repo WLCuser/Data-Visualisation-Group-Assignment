@@ -17,7 +17,7 @@ d3.csv("data/First-Nations-hospitalised-injuries-clean.csv", d => {
 
 const drawStacked = data => {
     // Stack order: first key is at the bottom
-    const statuses = ["Non-Indigenous", "First Nations people"];
+    const statuses = ["First Nations people","Non-Indigenous"];
 
     const svg = d3.select("#chart4")
         .append("svg")
@@ -50,7 +50,7 @@ const drawStacked = data => {
 
     const color = d3.scaleOrdinal()
         .domain(statuses)
-        .range(["steelblue", "green"]);
+        .range(colorSafe10);
 
     // X: one band per remoteness area
     const xScale = d3.scaleBand()
