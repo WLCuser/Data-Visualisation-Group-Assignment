@@ -128,7 +128,7 @@ const drawDonutChart = data => {
         .append("text")
         .attr("text-anchor", "middle")
         .attr("y", 14)
-        .style("font-size", "12px")
+        .style("font-size", "14px")
         .text("cases");
 
     // Legend 1: counterparty (inner ring), top left
@@ -139,7 +139,7 @@ const drawDonutChart = data => {
     counterpartyLegend
         .append("text")
         .attr("y", 0)
-        .style("font-size", "12px")
+        .style("font-size", "14px")
         .style("font-weight", "bold")
         .text("Inner ring: counterparty");
 
@@ -157,7 +157,7 @@ const drawDonutChart = data => {
             .attr("x", 18)
             .attr("y", 5)
             .style("alignment-baseline", "middle")
-            .style("font-size", "12px")
+            .style("font-size", "14px")
             .text(counterparty);
     });
 
@@ -169,7 +169,7 @@ const drawDonutChart = data => {
     stateLegend
         .append("text")
         .attr("y", 0)
-        .style("font-size", "12px")
+        .style("font-size", "14px")
         .style("font-weight", "bold")
         .text("Outer ring: state or territory");
 
@@ -187,7 +187,7 @@ const drawDonutChart = data => {
             .attr("x", 18)
             .attr("y", 5)
             .style("alignment-baseline", "middle")
-            .style("font-size", "12px")
+            .style("font-size", "14px")
             .text(state);
     });
 };

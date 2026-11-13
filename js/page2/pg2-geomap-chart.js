@@ -196,7 +196,7 @@ const drawMap = data => {
                     .attr("y", cy + 6)
                     .attr("dy", "0.35em")
                     .attr("fill", "#222")
-                    .style("font-size", "11px")
+                    .style("font-size", "14px")
                     .text(code);
             } else {
                 labels.append("text")
@@ -205,7 +205,7 @@ const drawMap = data => {
                     .attr("dy", "0.35em")
                     .attr("text-anchor", "middle")
                     .attr("fill", isDark ? "white" : "#222")
-                    .style("font-size", "12px")
+                    .style("font-size", "14px")
                     .style("font-weight", "bold")
                     .text(code);
             }
@@ -224,7 +224,7 @@ const drawMap = data => {
         .text("Hospitalisations")
         .attr("x", 0)
         .attr("y", -5)
-        .style("font-size", "10px");
+        .style("font-size", "20px");
 
     colours.forEach((c, i) => {
         legend.append("rect")
@@ -250,7 +250,7 @@ const drawMap = data => {
             .text("No data")
             .attr("x", -52)
             .attr("y", boxHeight - 1)
-            .style("font-size", "10px");
+            .style("font-size", "14px");
     }
 
     d3.range(colours.length + 1).forEach(i => {
@@ -259,7 +259,7 @@ const drawMap = data => {
             .attr("x", i * boxWidth)
             .attr("y", boxHeight + 11)
             .attr("text-anchor", "middle")
-            .style("font-size", "10px");
+            .style("font-size", "12px");
     });
 
     // Hover tooltip, drawn here because the shared tooltip code only handles the circles of a line chart
@@ -277,7 +277,7 @@ const drawMap = data => {
 
     const tipText = tip.append("text")
         .attr("fill", "white")
-        .style("font-size", "12px");
+        .style("font-size", "14px");
 
     statePaths
         .on("mouseenter", function () {

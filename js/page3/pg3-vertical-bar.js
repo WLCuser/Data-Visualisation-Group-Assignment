@@ -62,25 +62,29 @@ const drawAgeChart = data => {
     innerChart
         .append("g")
         .attr("transform", `translate(0,${innerHeight})`)
-        .call(bottomAxis);
+        .call(bottomAxis)
+        .style("font-size", "14px");
 
     innerChart
         .append("g")
-        .call(leftAxis);
+        .call(leftAxis)
+        .style("font-size", "14px");
 
     innerChart
         .append("text")
         .text("Hospitalisations")
         .attr("x", -margin.left)
-        .attr("y", -10)
-        .attr("text-anchor", "start");
+        .attr("y", -16)
+        .attr("text-anchor", "start")
+        .style("font-size", "20px");
 
     innerChart
         .append("text")
         .text("Age group")
         .attr("x", innerWidth)
         .attr("y", innerHeight + margin.bottom - 10)
-        .attr("text-anchor", "end");
+        .attr("text-anchor", "end")
+        .style("font-size", "20px");
 
     // Bars
     innerChart
@@ -114,7 +118,7 @@ const drawAgeChart = data => {
             .attr("text-anchor", "start")
             .attr("fill", "currentColor")
             .style("alignment-baseline", "middle")
-            .style("font-size", "12px")
+            .style("font-size", "16px")
             .text(status);
     });
 };

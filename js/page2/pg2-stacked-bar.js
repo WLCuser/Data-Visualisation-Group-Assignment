@@ -83,14 +83,16 @@ const drawStacked = data => {
         .text("Hospitalisations")
         .attr("x", -margin.left)
         .attr("y", -10)
-        .attr("text-anchor", "start");
+        .attr("text-anchor", "start")
+        .style("font-size", "20px");
 
     innerChart
         .append("text")
         .text("State or territory")
         .attr("x", innerWidth)
         .attr("y", innerHeight + margin.bottom - 10)
-        .attr("text-anchor", "end");
+        .attr("text-anchor", "end")
+        .style("font-size", "20px");
 
     // Stacked bars: one group per age group, one rect per state 
     innerChart
@@ -116,7 +118,7 @@ const drawStacked = data => {
         .text("Age group")
         .attr("x", 0)
         .attr("y", -8)
-        .style("font-size", "12px")
+        .style("font-size", "14px")
         .style("font-weight", "bold");
 
     ageGroups.slice().reverse().forEach((ageGroup, i) => {   // top item matches top of stack

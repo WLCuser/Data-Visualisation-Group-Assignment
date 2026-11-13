@@ -32,11 +32,11 @@ function drawChart1(currentFilteredData, fullMasterData) {
 
     // X Axis & Label (Label positioned at the right end of X axis)
     svg.append("g").attr("transform", `translate(0,${innerHeight})`).call(d3.axisBottom(x).tickFormat(d3.format("d"))).selectAll("text").style("font-size", "14px");
-    svg.append("text").attr("x", innerWidth).attr("y", innerHeight + 40).style("text-anchor", "end").style("font-size", "16px").style("fill", "#000").text("Calendar year");
+    svg.append("text").attr("x", innerWidth).attr("y", innerHeight + 40).style("text-anchor", "end").style("font-size", "20px").style("fill", "#000").text("Calendar year");
 
     // Y Axis & Label (Label positioned right above the top of Y axis)
     svg.append("g").call(d3.axisLeft(y).ticks(5)).selectAll("text").style("font-size", "14px");
-    svg.append("text").attr("x", -10).attr("y", -16).style("text-anchor", "start").style("font-size", "16px").style("fill", "#000").text("Hospitalisations");
+    svg.append("text").attr("x", -10).attr("y", -16).style("text-anchor", "start").style("font-size", "20px").style("fill", "#000").text("Hospitalisations");
 
     const line = d3.line().x(d => x(d.year)).y(d => y(d.count));
     svg.append("path").datum(chartData).attr("fill", "none").attr("stroke", "#4682b4").attr("stroke-width", 3).attr("d", line);

@@ -31,13 +31,13 @@ function drawChart3(data) {
 
     // X Axis & Label (Right end of X axis)
     svg.append("g").attr("transform", `translate(0,${innerHeight})`).call(d3.axisBottom(x)).selectAll("text").style("font-size", "14px");
-    svg.append("text").attr("x", innerWidth).attr("y", innerHeight + 40).style("text-anchor", "end").style("font-size", "16px").style("fill", "#000").text("Age group");
+    svg.append("text").attr("x", innerWidth).attr("y", innerHeight + 40).style("text-anchor", "end").style("font-size", "20px").style("fill", "#000").text("Age group");
 
     const y = d3.scaleLinear().domain([0, d3.max(chartData, d => d.count) || 1000]).range([innerHeight, 0]);
 
     // Y Axis & Label (Top of Y axis)
     svg.append("g").call(d3.axisLeft(y).ticks(5)).selectAll("text").style("font-size", "14px");
-    svg.append("text").attr("x", -10).attr("y", -16).style("text-anchor", "start").style("font-size", "16px").style("fill", "#000").text("Hospitalisations");
+    svg.append("text").attr("x", -10).attr("y", -16).style("text-anchor", "start").style("font-size", "20px").style("fill", "#000").text("Hospitalisations");
 
     svg.selectAll("rect")
         .data(chartData).enter().append("rect")

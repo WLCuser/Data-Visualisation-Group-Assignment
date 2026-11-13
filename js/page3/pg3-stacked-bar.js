@@ -68,25 +68,29 @@ const drawStacked = data => {
     innerChart
         .append("g")
         .attr("transform", `translate(0,${innerHeight})`)
-        .call(d3.axisBottom(xScale));
+        .call(d3.axisBottom(xScale))
+        .style("font-size", "14px");
 
     innerChart
         .append("g")
-        .call(d3.axisLeft(yScale));
+        .call(d3.axisLeft(yScale))
+        .style("font-size", "14px");
 
     innerChart
         .append("text")
         .text("Hospitalisations")
         .attr("x", -margin.left)
-        .attr("y", -10)
-        .attr("text-anchor", "start");
+        .attr("y", -16)
+        .attr("text-anchor", "start")
+        .style("font-size", "20px");
 
     innerChart
         .append("text")
         .text("Remoteness area")
         .attr("x", innerWidth)
         .attr("y", innerHeight + margin.bottom - 10)
-        .attr("text-anchor", "end");
+        .attr("text-anchor", "end")
+        .style("font-size", "20px");
 
     // Stacked bars: one group per status, one rect per remoteness area
     innerChart
@@ -122,7 +126,7 @@ const drawStacked = data => {
             .attr("x", 20)
             .attr("y", 5)
             .style("alignment-baseline", "middle")
-            .style("font-size", "12px")
+            .style("font-size", "16px")
             .text(status);
     });
 };

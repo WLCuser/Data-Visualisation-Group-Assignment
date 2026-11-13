@@ -74,11 +74,11 @@ function drawChart2(data) {
     const x = d3.scaleLinear().domain([0, d3.max(chartData, d => d.count) || 1000]).range([0, chartWidth]);
 
     // X Axis & Label (Right end of X axis)
-    svg.append("g").attr("transform", `translate(0,${chartHeight})`).call(d3.axisBottom(x).ticks(5)).selectAll("text").style("font-size", "14px");
-    svg.append("text").attr("x", chartWidth).attr("y", chartHeight + 40).style("text-anchor", "end").style("font-size", "16px").style("fill", "#000").text("Hospitalisations");
+    svg.append("g").attr("transform", `translate(0,${chartHeight})`).call(d3.axisBottom(x).ticks(5)).selectAll("text").style("font-size", "12px");
+    svg.append("text").attr("x", chartWidth).attr("y", chartHeight + 40).style("text-anchor", "end").style("font-size", "20px").style("fill", "#000").text("Hospitalisations");
 
     // Y Axis Label (Top of Y axis)
-    svg.append("text").attr("x", -10).attr("y", -16).style("text-anchor", "start").style("font-size", "16px").style("fill", "#000").text("Road user");
+    svg.append("text").attr("x", -10).attr("y", -16).style("text-anchor", "start").style("font-size", "20px").style("fill", "#000").text("Road user");
 
     svg.selectAll("rect")
         .data(chartData).enter().append("rect")

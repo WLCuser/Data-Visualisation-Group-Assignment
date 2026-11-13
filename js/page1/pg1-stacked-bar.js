@@ -55,14 +55,14 @@ function drawChart4(data) {
 
     // X Axis & Label (Right end of X axis)
     svg.append("g").attr("transform", `translate(0,${chartHeight})`).call(d3.axisBottom(x).tickSize(0)).selectAll("text").style("font-size", "14px");
-    svg.append("text").attr("x", chartWidth).attr("y", chartHeight + 40).style("text-anchor", "end").style("font-size", "16px").style("fill", "#000").text("Calendar year");
+    svg.append("text").attr("x", chartWidth).attr("y", chartHeight + 40).style("text-anchor", "end").style("font-size", "20px").style("fill", "#000").text("Calendar year");
 
     let maxVal = d3.max(chartData, d => d3.sum(remotenessTypes, key => d[key])) || 1000;
     const y = d3.scaleLinear().domain([0, maxVal * 1.1]).range([chartHeight, 0]);
 
     // Y Axis & Label (Top of Y axis)
     svg.append("g").call(d3.axisLeft(y).ticks(5)).selectAll("text").style("font-size", "14px");
-    svg.append("text").attr("x", -10).attr("y", -16).style("text-anchor", "start").style("font-size", "16px").style("fill", "#000").text("Hospitalisations");
+    svg.append("text").attr("x", -10).attr("y", -16).style("text-anchor", "start").style("font-size", "20px").style("fill", "#000").text("Hospitalisations");
 
     const color = d3.scaleOrdinal().domain(remotenessTypes).range(colorSafe10);
     const stack = d3.stack().keys(remotenessTypes);

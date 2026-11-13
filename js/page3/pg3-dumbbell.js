@@ -108,13 +108,15 @@ const drawDumbbellChart = data => {
     innerChart
         .append("g")
         .attr("transform", `translate(0,${innerHeight})`)
-        .call(d3.axisBottom(xScale).tickFormat(d => d + "%"));
+        .call(d3.axisBottom(xScale).tickFormat(d => d + "%"))
+        .style("font-size", "10px");
 
     innerChart
         .append("g")
         .call(d3.axisLeft(yScale))
         .selectAll(".tick text")
-        .call(wrapLabels, margin.left - 20);
+        .call(wrapLabels, margin.left - 20)
+        .style("font-size", "10px");
 
     // Axis labels
     innerChart
@@ -122,14 +124,16 @@ const drawDumbbellChart = data => {
         .text("Percentage of group's hospitalisations (%)")
         .attr("x", innerWidth)
         .attr("y", innerHeight + margin.bottom - 10)
-        .attr("text-anchor", "end");
+        .attr("text-anchor", "end")
+        .style("font-size", "20px");
 
     innerChart
         .append("text")
         .text("Road User")
         .attr("x", -margin.left + 50)
         .attr("y", -10)
-        .attr("text-anchor", "start");
+        .attr("text-anchor", "start")
+        .style("font-size", "20px");
 
     // Faint guide line across each row
     innerChart

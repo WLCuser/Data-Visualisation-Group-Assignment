@@ -135,14 +135,16 @@ const drawBarChart = data => {
         .text("Hospitalisations")
         .attr("x", innerWidth)
         .attr("y", innerHeight + margin.bottom - 10)
-        .attr("text-anchor", "end");
+        .attr("text-anchor", "end")
+        .style("font-size", "20px");
 
     innerChart
         .append("text")
         .text("Road user")
         .attr("x", -margin.left + 50)
         .attr("y", -10)
-        .attr("text-anchor", "start");
+        .attr("text-anchor", "start")
+        .style("font-size", "20px");
 
     // Stacked bars: one rect per road user per state
     innerChart
@@ -167,7 +169,7 @@ const drawBarChart = data => {
         .attr("y", d => yScale(d.RoadUser) + yScale.bandwidth() / 2)
         .attr("dy", "0.35em")
         .attr("fill", "currentColor")
-        .style("font-size", "12px")
+        .style("font-size", "14px")
         .text(d => d3.format(",")(d.total));
 
     // Legend (bottom right of the chart area, where the bars are short)

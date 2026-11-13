@@ -97,7 +97,7 @@ const drawDonutChart = data => {
         .join("text")
         .attr("transform", d => `translate(${innerArc.centroid(d)})`)
         .attr("text-anchor", "middle")
-        .style("font-size", "12px")
+        .style("font-size", "14px")
         .text(d => (d.endAngle - d.startAngle > 0.3 ? d3.format(".1%")(d.data.total / grandTotal) : ""));
 
     // Outer ring: split by status within each counterparty
@@ -125,7 +125,7 @@ const drawDonutChart = data => {
         .append("text")
         .attr("text-anchor", "middle")
         .attr("y", 14)
-        .style("font-size", "12px")
+        .style("font-size", "14px")
         .text("cases");
     
 
@@ -137,7 +137,7 @@ const drawDonutChart = data => {
     counterpartyLegend
         .append("text")
         .attr("y", 0)
-        .style("font-size", "12px")
+        .style("font-size", "14px")
         .style("font-weight", "bold")
         .text("Inner ring: counterparty");
 
@@ -155,7 +155,7 @@ const drawDonutChart = data => {
             .attr("x", 18)
             .attr("y", 5)
             .style("alignment-baseline", "middle")
-            .style("font-size", "12px")
+            .style("font-size", "14px")
             .text(counterparty);
     });
 
@@ -167,7 +167,7 @@ const drawDonutChart = data => {
     statusLegend
         .append("text")
         .attr("y", 0)
-        .style("font-size", "12px")
+        .style("font-size", "14px")
         .style("font-weight", "bold")
         .text("Outer ring: status");
 
@@ -185,7 +185,7 @@ const drawDonutChart = data => {
             .attr("x", 18)
             .attr("y", 5)
             .style("alignment-baseline", "middle")
-            .style("font-size", "12px")
+            .style("font-size", "14px")
             .text(status);
     });
 };
