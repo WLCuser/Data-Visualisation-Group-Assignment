@@ -101,7 +101,7 @@ const drawBarChart = data => {
 
     const color = d3.scaleOrdinal()
         .domain(states)
-        .range(d3.schemeTableau10.slice(0, 8));
+        .range(colorSafe10.slice(0, 8));
 
     // One band per road user, with room between the bars
     const yScale = d3.scaleBand()

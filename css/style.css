@@ -90,3 +90,69 @@ nav a.active{
     font-size: 12px;
     opacity: 0;
 }
+
+.container > div {
+    position: relative;   /* so the button can sit in the card's corner */
+}
+
+.zoom-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border: 1px solid #cbd5e1;
+    background: white;
+    border-radius: 4px;
+    padding: 4px 7px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.zoom-btn:hover {
+    background: #f1f5f9;
+}
+
+.zoom-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.6);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.zoom-overlay.open {
+    display: flex;
+}
+
+.zoom-box {
+    position: relative;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: min(92vw, 1300px);
+    max-height: 92vh;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.zoom-title {
+    margin: 0 40px 12px 0;
+    font-size: 20px;
+}
+
+.zoom-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.zoom-box svg {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+}

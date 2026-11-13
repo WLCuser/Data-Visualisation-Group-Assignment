@@ -126,7 +126,7 @@ const drawInfographic = data => {
         .style("font-weight", "bold");
 
     const stats = [
-        { big: fmt(grandTotal), caption: "traffic injury hospitalisations, 2011–2021", fill: "currentColor", x: 10 },
+        { big: fmt(grandTotal), caption: "traffic injury hospitalisations", fill: "currentColor", x: 10 },
         { big: pct(maleTotal / grandTotal), caption: `male (${fmt(maleTotal)} cases)`, fill: color("Male"), x: 240 },
         { big: pct(femaleTotal / grandTotal), caption: `female (${fmt(femaleTotal)} cases)`, fill: color("Female"), x: 410 }
     ];
@@ -169,7 +169,7 @@ const drawInfographic = data => {
 
     innerChart
         .append("text")
-        .text("Hospitalisations (2011–2021)")
+        .text("Hospitalisations")
         .attr("x", innerWidth)
         .attr("y", innerHeight + margin.bottom - 10)
         .attr("text-anchor", "end");

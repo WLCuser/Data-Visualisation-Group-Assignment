@@ -90,6 +90,7 @@ const registerChart = (chartId, data, draw, filterYear = true) => {
     charts.push({ chartId, data, draw, filterYear });
     buildStateFilters(data);   // NEW: does nothing unless the data has a "state" field
     updateYearTitle();
+    addZoomButton(chartId);
 };
 
 // Replaces your updateHistogram: filter each chart's data, remove its svg, draw it again

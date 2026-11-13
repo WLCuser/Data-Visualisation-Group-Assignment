@@ -12,19 +12,20 @@ d3.csv("data/state-and-territory-hospitalisation-injury-clean.csv", d => {
 });
 
 const drawBedDays = data => {
+    const stateColor = d3.scaleOrdinal()
+    .domain(["NSW", "Vic", "Qld", "WA", "SA", "Tas", "ACT", "NT"])
+    .range(colorSafe10);
 
-    // Rows in a fixed order, with the full name and the same colour as the state has in the other charts
-    // (Okabe-Ito, colour-blind friendly). The colour is only a small marker: the name is written out.
     const states = [
-        { code: "NSW", name: "New South Wales",              colour: "#0072B2" },
-        { code: "Vic", name: "Victoria",                     colour: "#E69F00" },
-        { code: "Qld", name: "Queensland",                   colour: "#009E73" },
-        { code: "WA",  name: "Western Australia",            colour: "#CC79A7" },
-        { code: "SA",  name: "South Australia",              colour: "#56B4E9" },
-        { code: "Tas", name: "Tasmania",                     colour: "#D55E00" },
-        { code: "ACT", name: "Australian Capital Territory", colour: "#F0E442" },
-        { code: "NT",  name: "Northern Territory",           colour: "#000000" }
-    ];
+        { code: "NSW", name: "New South Wales" },
+        { code: "Vic", name: "Victoria" },
+        { code: "Qld", name: "Queensland" },
+        { code: "WA",  name: "Western Australia" },
+        { code: "SA",  name: "South Australia" },
+        { code: "Tas", name: "Tasmania" },
+        { code: "ACT", name: "Australian Capital Territory" },
+        { code: "NT",  name: "Northern Territory" }
+    ].map(s => ({ ...s, colour: stateColor(s.code) }));
 
     // Drawn inside an svg, because the shared code removes the svg and calls this function again
     // every time a filter changes
