@@ -92,7 +92,7 @@ const drawStacked = data => {
         .attr("y", innerHeight + margin.bottom - 10)
         .attr("text-anchor", "end");
 
-    // Stacked bars: one group per age group, one rect per state
+    // Stacked bars: one group per age group, one rect per state 
     innerChart
         .selectAll("g.series")
         .data(stackedData)
@@ -110,7 +110,7 @@ const drawStacked = data => {
     // Legend (top right, where the bars are short)
     const legend = svg
         .append("g")
-        .attr("transform", `translate(${width - 200}, ${margin.top})`);
+        .attr("transform", `translate(${width - 110}, ${margin.top})`);
 
     legend.append("text")
         .text("Age group")
