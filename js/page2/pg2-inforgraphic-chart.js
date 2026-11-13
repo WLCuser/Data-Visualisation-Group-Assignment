@@ -145,7 +145,7 @@ const drawInfographic = data => {
             .attr("x", s.x)
             .attr("y", 82)
             .attr("fill", "currentColor")
-            .style("font-size", "11px")
+            .style("font-size", "12px")
             .call(wrapText, 200);
     });
 
@@ -196,7 +196,7 @@ const drawInfographic = data => {
         .attr("y", d => yScale(d.state) + ySubScale(d.sex) + ySubScale.bandwidth() / 2)
         .attr("dy", "0.35em")
         .attr("fill", "currentColor")
-        .style("font-size", "11px")
+        .style("font-size", "12px")
         .text(d => `${fmt(d.total)} (${pct(d.share)})`);
 
     // Legend (bottom right of the chart area, where the bars are short)

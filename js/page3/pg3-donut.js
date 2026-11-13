@@ -97,7 +97,7 @@ const drawDonutChart = data => {
         .join("text")
         .attr("transform", d => `translate(${innerArc.centroid(d)})`)
         .attr("text-anchor", "middle")
-        .style("font-size", "10px")
+        .style("font-size", "12px")
         .text(d => (d.endAngle - d.startAngle > 0.3 ? d3.format(".1%")(d.data.total / grandTotal) : ""));
 
     // Outer ring: split by status within each counterparty
@@ -125,7 +125,7 @@ const drawDonutChart = data => {
         .append("text")
         .attr("text-anchor", "middle")
         .attr("y", 14)
-        .style("font-size", "11px")
+        .style("font-size", "12px")
         .text("cases");
     
 

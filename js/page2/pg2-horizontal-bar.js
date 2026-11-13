@@ -167,7 +167,7 @@ const drawBarChart = data => {
         .attr("y", d => yScale(d.RoadUser) + yScale.bandwidth() / 2)
         .attr("dy", "0.35em")
         .attr("fill", "currentColor")
-        .style("font-size", "11px")
+        .style("font-size", "12px")
         .text(d => d3.format(",")(d.total));
 
     // Legend (bottom right of the chart area, where the bars are short)
