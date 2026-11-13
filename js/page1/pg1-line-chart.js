@@ -1,8 +1,13 @@
 function drawChart1(currentFilteredData, fullMasterData) {
     const container = d3.select("#chart1");
-    container.html("<b>Chart 1 - Line chart: Annual hospitalised injuries</b>");
+    container.html(`
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+            <b>Chart 1 - Line chart: Annual hospitalised injuries</b>
+            <button class="chart-zoom-btn" title="Expand chart">🔍</button>
+        </div>
+    `);
 
-    const margin = {top: 15, right: 15, bottom: 35, left: 55},
+    const margin = {top: 30, right: 20, bottom: 35, left: 50},
           width = 440 - margin.left - margin.right,
           height = 190 - margin.top - margin.bottom;
 
@@ -22,13 +27,13 @@ function drawChart1(currentFilteredData, fullMasterData) {
     const x = d3.scaleLinear().domain([2011, 2021]).range([0, width]);
     const y = d3.scaleLinear().domain([0, d3.max(chartData, d => d.count) * 1.1 || 1000]).range([height, 0]);
 
-    // X Axis & Label
+    // X Axis & Label (Label positioned at the right end of X axis)
     svg.append("g").attr("transform", `translate(0,${height})`).call(d3.axisBottom(x).tickFormat(d3.format("d"))).selectAll("text").style("font-size", "9px");
-    svg.append("text").attr("x", width / 2).attr("y", height + 30).style("text-anchor", "middle").style("font-size", "10px").style("fill", "#000").text("Calendar year");
+    svg.append("text").attr("x", width).attr("y", height + 30).style("text-anchor", "end").style("font-size", "10px").style("fill", "#000").text("Calendar year");
 
-    // Y Axis & Label
+    // Y Axis & Label (Label positioned right above the top of Y axis)
     svg.append("g").call(d3.axisLeft(y).ticks(4)).selectAll("text").style("font-size", "9px");
-    svg.append("text").attr("transform", "rotate(-90)").attr("y", -40).attr("x", -height / 2).style("text-anchor", "middle").style("font-size", "10px").style("fill", "#000").text("Hospitalisations");
+    svg.append("text").attr("x", -10).attr("y", -12).style("text-anchor", "start").style("font-size", "10px").style("fill", "#000").text("Hospitalisations");
 
     const line = d3.line().x(d => x(d.year)).y(d => y(d.count));
     svg.append("path").datum(chartData).attr("fill", "none").attr("stroke", "#4682b4").attr("stroke-width", 2).attr("d", line);

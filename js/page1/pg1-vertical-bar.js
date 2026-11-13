@@ -1,8 +1,13 @@
 function drawChart3(data) {
     const container = d3.select("#chart3");
-    container.html("<b>Chart 3 - Vertical bar chart: Annual hospitalisations by age group</b>");
+    container.html(`
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+            <b>Chart 3 - Vertical bar chart: Annual hospitalisations by age group</b>
+            <button class="chart-zoom-btn" title="Expand chart">🔍</button>
+        </div>
+    `);
 
-    const margin = {top: 15, right: 15, bottom: 35, left: 55},
+    const margin = {top: 30, right: 15, bottom: 35, left: 55},
           width = 440 - margin.left - margin.right,
           height = 190 - margin.top - margin.bottom;
 
@@ -21,15 +26,15 @@ function drawChart3(data) {
 
     const x = d3.scaleBand().range([0, width]).domain(chartData.map(d => d.age)).padding(0.2);
     
-    // X Axis & Label
+    // X Axis & Label (Right end of X axis)
     svg.append("g").attr("transform", `translate(0,${height})`).call(d3.axisBottom(x)).selectAll("text").style("font-size", "9px");
-    svg.append("text").attr("x", width / 2).attr("y", height + 30).style("text-anchor", "middle").style("font-size", "10px").style("fill", "#000").text("Age group");
+    svg.append("text").attr("x", width).attr("y", height + 30).style("text-anchor", "end").style("font-size", "10px").style("fill", "#000").text("Age group");
 
     const y = d3.scaleLinear().domain([0, d3.max(chartData, d => d.count) || 1000]).range([height, 0]);
     
-    // Y Axis & Label
+    // Y Axis & Label (Top of Y axis)
     svg.append("g").call(d3.axisLeft(y).ticks(4)).selectAll("text").style("font-size", "9px");
-    svg.append("text").attr("transform", "rotate(-90)").attr("y", -40).attr("x", -height / 2).style("text-anchor", "middle").style("font-size", "10px").style("fill", "#000").text("Hospitalisations");
+    svg.append("text").attr("x", -10).attr("y", -12).style("text-anchor", "start").style("font-size", "10px").style("fill", "#000").text("Hospitalisations");
 
     svg.selectAll("rect")
         .data(chartData).enter().append("rect")

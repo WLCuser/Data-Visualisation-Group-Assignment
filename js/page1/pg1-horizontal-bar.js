@@ -1,8 +1,13 @@
 function drawChart2(data) {
     const container = d3.select("#chart2");
-    container.html("<b>Chart 2 - Horizontal bar chart: Annual hospitalisations by road user</b>");
+    container.html(`
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+            <b>Chart 2 - Horizontal bar chart: Annual hospitalisations by road user</b>
+            <button class="chart-zoom-btn" title="Expand chart">🔍</button>
+        </div>
+    `);
 
-    const margin = {top: 15, right: 15, bottom: 35, left: 120},
+    const margin = {top: 30, right: 15, bottom: 35, left: 120},
           width = 440 - margin.left - margin.right,
           height = 190 - margin.top - margin.bottom;
 
@@ -23,9 +28,12 @@ function drawChart2(data) {
 
     const x = d3.scaleLinear().domain([0, d3.max(chartData, d => d.count) || 1000]).range([0, width]);
     
-    // X Axis & Label
+    // X Axis & Label (Right end of X axis)
     svg.append("g").attr("transform", `translate(0,${height})`).call(d3.axisBottom(x).ticks(4)).selectAll("text").style("font-size", "9px");
-    svg.append("text").attr("x", width / 2).attr("y", height + 30).style("text-anchor", "middle").style("font-size", "10px").style("fill", "#000").text("Hospitalisations");
+    svg.append("text").attr("x", width).attr("y", height + 30).style("text-anchor", "end").style("font-size", "10px").style("fill", "#000").text("Hospitalisations");
+
+    // Y Axis Label (Top of Y axis)
+    svg.append("text").attr("x", -10).attr("y", -12).style("text-anchor", "start").style("font-size", "10px").style("fill", "#000").text("Road user");
 
     svg.selectAll("rect")
         .data(chartData).enter().append("rect")
