@@ -80,18 +80,6 @@ nav a.active{
     margin: 16px;         /* same space on all four sides */
 }
 
-.d3-tip {
-    position: absolute;
-    pointer-events: none;
-    z-index: 99999;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 6px 10px;
-    border-radius: 4px;
-    font-size: 12px;
-    opacity: 0;
-}
-
 .container > div {
     position: relative;   /* so the button can sit in the card's corner */
 }
