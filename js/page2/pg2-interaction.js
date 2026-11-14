@@ -189,7 +189,8 @@ const createTooltip = (chartId) => {
         .attr("text-anchor", "middle")
         .attr("alignment-baseline", "middle")
         .attr("fill", "white")
-        .style("font-weight", 900);
+        .style("font-weight", 900)
+        .style("font-size","20px");
 }
 
 const handleMouseEvents = (chartId) => {

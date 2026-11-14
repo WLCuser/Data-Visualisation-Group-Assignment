@@ -20,9 +20,6 @@ function drawChart1(currentFilteredData, fullMasterData) {
     // Zoom button comes from zoom.js
     addZoomButton("#chart1");
 
-    let tooltip = d3.select("body").select(".d3-tip");
-    if (tooltip.empty()) tooltip = d3.select("body").append("div").attr("class", "d3-tip").style("opacity", 0);
-
     const sourceData = (fullMasterData && fullMasterData.length > 0) ? fullMasterData : currentFilteredData;
     const rollup = d3.rollup(sourceData, v => d3.sum(v, d => d['Hospitalisations']), d => d['Calendar year']);
     const chartData = Array.from(rollup, ([year, count]) => ({ year, count })).sort((a,b) => a.year - b.year);
@@ -41,16 +38,24 @@ function drawChart1(currentFilteredData, fullMasterData) {
     const line = d3.line().x(d => x(d.year)).y(d => y(d.count));
     svg.append("path").datum(chartData).attr("fill", "none").attr("stroke", "#4682b4").attr("stroke-width", 3).attr("d", line);
 
+    // Shared tooltip from tooltip.js
+    const tip = createSvgTooltip(svg);
+
     svg.selectAll("circle")
         .data(chartData).enter().append("circle")
         .attr("cx", d => x(d.year)).attr("cy", d => y(d.count))
         .attr("r", d => (activeFilters.year === 'All' || d.year == activeFilters.year) ? 8 : 5)
         .attr("fill", "#4682b4")
         .style("opacity", d => (activeFilters.year === 'All' || d.year == activeFilters.year) ? 1 : 0.3)
-        .on("mouseover", (event, d) => {
-            tooltip.transition().duration(200).style("opacity", .9);
-            tooltip.html(`Year: <b>${d.year}</b><br>Hospitalisations: <b>${d.count.toLocaleString()}</b>`)
-                   .style("left", (event.pageX + 10) + "px").style("top", (event.pageY - 28) + "px");
+        .on("mouseenter", (event, d) => {
+            tip.show(
+                [
+                    { label: "Year", value: d.year },
+                    { label: "Hospitalisations", value: d.count.toLocaleString() }
+                ],
+                x(d.year), y(d.count) - 8,
+                { minX: 0, maxX: innerWidth, minY: -margin.top }
+            );
         })
-        .on("mouseout", () => tooltip.transition().duration(500).style("opacity", 0));
+        .on("mouseleave", () => tip.hide());
 }

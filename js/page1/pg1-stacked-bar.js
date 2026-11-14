@@ -28,9 +28,6 @@ function drawChart4(data) {
     // Zoom button comes from zoom.js
     addZoomButton("#chart4");
 
-    let tooltip = d3.select("body").select(".d3-tip");
-    if (tooltip.empty()) tooltip = d3.select("body").append("div").attr("class", "d3-tip").style("opacity", 0);
-
     let nested = {};
     let remotenessSet = new Set();
 
@@ -68,21 +65,30 @@ function drawChart4(data) {
     const stack = d3.stack().keys(remotenessTypes);
     const series = stack(chartData);
 
+    // Shared tooltip from tooltip.js
+    const tip = createSvgTooltip(svg);
+
     svg.selectAll("g.layer")
-        .data(series).enter().append("g").attr("fill", d => color(d.key))
+        .data(series).enter().append("g").attr("class", "layer").attr("fill", d => color(d.key))
         .selectAll("rect").data(d => d).enter().append("rect")
         .attr("x", d => x(d.data.year))
         .attr("y", d => y(d[1]))
         .attr("height", d => Math.max(0, y(d[0]) - y(d[1])))
         .attr("width", x.bandwidth())
-        .on("mouseover", (event, d) => {
-            let subCategory = d3.select(event.currentTarget.parentNode).datum().key;
-            let val = d[1] - d[0];
-            tooltip.transition().duration(200).style("opacity", .9);
-            tooltip.html(`Year: <b>${d.data.year}</b><br>Remoteness: <b>${subCategory}</b><br>Hospitalisations: <b>${val.toLocaleString()}</b>`)
-                   .style("left", (event.pageX + 10) + "px").style("top", (event.pageY - 28) + "px");
+        .on("mouseenter", (event, d) => {
+            const subCategory = d3.select(event.currentTarget.parentNode).datum().key;
+            const val = d[1] - d[0];
+            tip.show(
+                [
+                    { label: "Year", value: d.data.year },
+                    { label: "Remoteness", value: subCategory },
+                    { label: "Hospitalisations", value: val.toLocaleString() }
+                ],
+                x(d.data.year) + x.bandwidth() / 2, y(d[1]),
+                { minX: 0, maxX: chartWidth, minY: -margin.top }
+            );
         })
-        .on("mouseout", () => tooltip.transition().duration(500).style("opacity", 0));
+        .on("mouseleave", () => tip.hide());
 
     // Legend on the Right Side
     const legend = svg.append("g").attr("transform", `translate(${chartWidth + 20}, 5)`);

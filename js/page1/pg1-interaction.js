@@ -69,3 +69,64 @@ function getFilteredData(rawData) {
                (activeFilters.remoteness === 'All' || d['ABS remoteness area'] === activeFilters.remoteness);
     });
 }
+
+function createSvgTooltip(svg, { fontSize = 20, pad = 8, gap = 4 } = {}) {
+    const tooltip = svg.append("g")
+        .attr("class", "svg-tooltip")
+        .style("opacity", 0)
+        .style("pointer-events", "none");
+
+    const bg = tooltip.append("rect")
+        .attr("rx", 4)
+        .attr("ry", 4)
+        .attr("fill", "rgba(0, 0, 0, 0.8)");
+
+    const text = tooltip.append("text")
+        .attr("fill", "white")
+        .style("font-size", fontSize + "px");
+
+    return {
+        show(rows, x, y, bounds = {}) {
+            // Keep the tooltip above the bars/shapes drawn after it
+            tooltip.raise();
+
+            text.selectAll("*").remove();
+            rows.forEach((row, i) => {
+                const line = text.append("tspan")
+                    .attr("x", 0)
+                    .attr(i === 0 ? "y" : "dy", i === 0 ? 0 : "1.3em");
+                line.append("tspan").text(row.label + ": ");
+                line.append("tspan").style("font-weight", "bold").text(row.value);
+            });
+
+            // Size the box to fit the text
+            const b = text.node().getBBox();
+            const w = b.width + 2 * pad;
+            const h = b.height + 2 * pad;
+            text.attr("transform", `translate(${pad - b.x}, ${pad - b.y})`);
+            bg.attr("width", w).attr("height", h);
+
+            // Centre above the point, clamped to the bounds
+            const minX = bounds.minX ?? -Infinity;
+            const maxX = bounds.maxX ?? Infinity;
+            const minY = bounds.minY ?? -Infinity;
+            const tx = Math.min(Math.max(minX, x - w / 2), maxX - w);
+            const ty = Math.max(minY, y - h - gap);
+
+            tooltip
+                .attr("transform", `translate(${tx}, ${ty})`)
+                .interrupt()
+                .transition()
+                .duration(200)
+                .style("opacity", 0.9);
+        },
+
+        hide() {
+            tooltip
+                .interrupt()
+                .transition()
+                .duration(300)
+                .style("opacity", 0);
+        }
+    };
+}

@@ -83,6 +83,7 @@ nav a.active{
 .d3-tip {
     position: absolute;
     pointer-events: none;
+    z-index: 99999;
     background: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 6px 10px;

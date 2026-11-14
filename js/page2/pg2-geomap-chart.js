@@ -277,7 +277,7 @@ const drawMap = data => {
 
     const tipText = tip.append("text")
         .attr("fill", "white")
-        .style("font-size", "14px");
+        .style("font-size", "20px");
 
     statePaths
         .on("mouseenter", function () {

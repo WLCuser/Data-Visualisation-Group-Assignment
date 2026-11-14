@@ -20,9 +20,6 @@ function drawChart3(data) {
     // Zoom button comes from zoom.js
     addZoomButton("#chart3");
 
-    let tooltip = d3.select("body").select(".d3-tip");
-    if (tooltip.empty()) tooltip = d3.select("body").append("div").attr("class", "d3-tip").style("opacity", 0);
-
     const customAgeOrder = ['0-7', '8-16', '17-25', '26-39', '40-64', '65-74', '75+'];
     const rollup = d3.rollup(data, v => d3.sum(v, d => d['Hospitalisations']), d => d['Age group']);
     let chartData = customAgeOrder.map(age => ({ age, count: rollup.get(age) || 0 }));
@@ -39,15 +36,24 @@ function drawChart3(data) {
     svg.append("g").call(d3.axisLeft(y).ticks(5)).selectAll("text").style("font-size", "14px");
     svg.append("text").attr("x", -10).attr("y", -16).style("text-anchor", "start").style("font-size", "20px").style("fill", "#000").text("Hospitalisations");
 
-    svg.selectAll("rect")
+    // Shared tooltip from tooltip.js
+    const tip = createSvgTooltip(svg);
+
+    svg.selectAll("rect.bar")
         .data(chartData).enter().append("rect")
+        .attr("class", "bar")
         .attr("x", d => x(d.age)).attr("y", d => y(d.count))
         .attr("width", x.bandwidth()).attr("height", d => innerHeight - y(d.count))
         .attr("fill", "#f59e0b")
-        .on("mouseover", (event, d) => {
-            tooltip.transition().duration(200).style("opacity", .9);
-            tooltip.html(`Age Group: <b>${d.age}</b><br>Hospitalisations: <b>${d.count.toLocaleString()}</b>`)
-                   .style("left", (event.pageX + 10) + "px").style("top", (event.pageY - 28) + "px");
+        .on("mouseenter", (event, d) => {
+            tip.show(
+                [
+                    { label: "Age Group", value: d.age },
+                    { label: "Hospitalisations", value: d.count.toLocaleString() }
+                ],
+                x(d.age) + x.bandwidth() / 2, y(d.count),
+                { minX: 0, maxX: innerWidth, minY: -margin.top }
+            );
         })
-        .on("mouseout", () => tooltip.transition().duration(500).style("opacity", 0));
+        .on("mouseleave", () => tip.hide());
 }

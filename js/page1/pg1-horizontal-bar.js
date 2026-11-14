@@ -25,9 +25,6 @@ function drawChart2(data) {
     // Zoom button comes from zoom.js
     addZoomButton("#chart2");
 
-    let tooltip = d3.select("body").select(".d3-tip");
-    if (tooltip.empty()) tooltip = d3.select("body").append("div").attr("class", "d3-tip").style("opacity", 0);
-
     // Wraps SVG text onto multiple lines and keeps it vertically centred on its tick
     const wrapLabels = (selection, maxWidth) => {
         selection.each(function () {
@@ -80,15 +77,24 @@ function drawChart2(data) {
     // Y Axis Label (Top of Y axis)
     svg.append("text").attr("x", -10).attr("y", -16).style("text-anchor", "start").style("font-size", "20px").style("fill", "#000").text("Road user");
 
-    svg.selectAll("rect")
+    // Shared tooltip from tooltip.js
+    const tip = createSvgTooltip(svg);
+
+    svg.selectAll("rect.bar")
         .data(chartData).enter().append("rect")
+        .attr("class", "bar")
         .attr("x", x(0)).attr("y", d => y(d.roadUser))
         .attr("width", d => x(d.count)).attr("height", y.bandwidth())
         .attr("fill", "#0ea5e9")
-        .on("mouseover", (event, d) => {
-            tooltip.transition().duration(200).style("opacity", .9);
-            tooltip.html(`Road User: <b>${d.roadUser}</b><br>Hospitalisations: <b>${d.count.toLocaleString()}</b>`)
-                   .style("left", (event.pageX + 10) + "px").style("top", (event.pageY - 28) + "px");
+        .on("mouseenter", (event, d) => {
+            tip.show(
+                [
+                    { label: "Road User", value: d.roadUser },
+                    { label: "Hospitalisations", value: d.count.toLocaleString() }
+                ],
+                x(d.count), y(d.roadUser),
+                { minX: 0, maxX: chartWidth, minY: -margin.top }
+            );
         })
-        .on("mouseout", () => tooltip.transition().duration(500).style("opacity", 0));
+        .on("mouseleave", () => tip.hide());
 }
