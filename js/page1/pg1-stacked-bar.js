@@ -7,7 +7,9 @@ function drawChart4(data) {
     // Clear only elements, so the title text from index.html stays in the card
     container.selectAll("*").remove();
 
-    if (!data || data.length === 0) return;
+    // Empty data no longer exits early: the chart still draws its axes and zoom button,
+    // and a message is shown at the end instead.
+    data = data || [];
 
     // Shared top/bottom margins, width and height come from shared-constant.js.
     // Left/right are local: the legend sits to the right and needs room for its labels.
@@ -97,4 +99,12 @@ function drawChart4(data) {
         legendRow.append("rect").attr("width", 14).attr("height", 14).attr("fill", color(rem));
         legendRow.append("text").attr("x", 20).attr("y", 12).style("font-size", "14px").style("fill", "#334155").text(rem);
     });
+
+    // Message shown when the selected filters leave no data
+    if (data.length === 0) {
+        svg.append("text")
+            .attr("x", chartWidth / 2).attr("y", chartHeight / 2)
+            .style("text-anchor", "middle").style("font-size", "20px").style("fill", "#64748b")
+            .text("No data for the selected filters");
+    }
 }

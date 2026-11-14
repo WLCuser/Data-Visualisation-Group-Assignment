@@ -7,6 +7,9 @@ function drawChart2(data) {
     // Clear only elements, so the title text from index.html stays in the card
     container.selectAll("*").remove();
 
+    // Guard against missing data so the chart still draws its axes and zoom button
+    data = data || [];
+
     // Shared top/right/bottom margins, width and height come from shared-constant.js.
     // Left margin is wider here because the road user labels are long.
     const leftMargin = 180;
@@ -97,4 +100,12 @@ function drawChart2(data) {
             );
         })
         .on("mouseleave", () => tip.hide());
+
+    // Message shown when the selected filters leave no data
+    if (data.length === 0) {
+        svg.append("text")
+            .attr("x", chartWidth / 2).attr("y", chartHeight / 2)
+            .style("text-anchor", "middle").style("font-size", "20px").style("fill", "#64748b")
+            .text("No data for the selected filters");
+    }
 }

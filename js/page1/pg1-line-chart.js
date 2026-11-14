@@ -20,9 +20,25 @@ function drawChart1(currentFilteredData, fullMasterData) {
     // Zoom button comes from zoom.js
     addZoomButton("#chart1");
 
-    const sourceData = (fullMasterData && fullMasterData.length > 0) ? fullMasterData : currentFilteredData;
+    // The year filter must NOT remove data, otherwise the line collapses to one point.
+    // So start from the full data and apply every filter except year here.
+    // Maps each activeFilters key (from your main script) to its CSV column.
+    const filterColumns = {
+        gender:     'Sex',
+        roaduser:   'Road user',
+        age:        'Age group',
+        remoteness: 'ABS remoteness area'
+    };
+
+    const allData = (fullMasterData && fullMasterData.length > 0) ? fullMasterData : currentFilteredData;
+    const sourceData = allData.filter(d =>
+        Object.entries(filterColumns).every(([key, column]) =>
+            activeFilters[key] === 'All' || d[column] === activeFilters[key]
+        )
+    );
+
     const rollup = d3.rollup(sourceData, v => d3.sum(v, d => d['Hospitalisations']), d => d['Calendar year']);
-    const chartData = Array.from(rollup, ([year, count]) => ({ year, count })).sort((a,b) => a.year - b.year);
+    const chartData = Array.from(rollup, ([year, count]) => ({ year, count })).sort((a, b) => a.year - b.year);
 
     const x = d3.scaleLinear().domain([2011, 2021]).range([0, innerWidth]);
     const y = d3.scaleLinear().domain([0, d3.max(chartData, d => d.count) * 1.1 || 1000]).range([innerHeight, 0]);
@@ -44,7 +60,7 @@ function drawChart1(currentFilteredData, fullMasterData) {
     svg.selectAll("circle")
         .data(chartData).enter().append("circle")
         .attr("cx", d => x(d.year)).attr("cy", d => y(d.count))
-        .attr("r", d => (activeFilters.year === 'All' || d.year == activeFilters.year) ? 8 : 5)
+        .attr("r", 8)
         .attr("fill", "#4682b4")
         .style("opacity", d => (activeFilters.year === 'All' || d.year == activeFilters.year) ? 1 : 0.3)
         .on("mouseenter", (event, d) => {

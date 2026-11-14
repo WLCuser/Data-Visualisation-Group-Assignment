@@ -7,6 +7,9 @@ function drawChart3(data) {
     // Clear only elements, so the title text from index.html stays in the card
     container.selectAll("*").remove();
 
+    // Guard against missing data so the chart still draws its axes and zoom button
+    data = data || [];
+
     // margin, width, height, innerWidth, innerHeight come from shared-constant.js
     // viewBox lets the SVG scale to the card and up inside the zoom popup
     const svgRoot = container.append("svg")
@@ -56,4 +59,12 @@ function drawChart3(data) {
             );
         })
         .on("mouseleave", () => tip.hide());
+
+    // Message shown when the selected filters leave no data
+    if (data.length === 0) {
+        svg.append("text")
+            .attr("x", innerWidth / 2).attr("y", innerHeight / 2)
+            .style("text-anchor", "middle").style("font-size", "20px").style("fill", "#64748b")
+            .text("No data for the selected filters");
+    }
 }
