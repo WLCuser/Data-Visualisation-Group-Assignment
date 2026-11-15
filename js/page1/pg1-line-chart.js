@@ -1,3 +1,4 @@
+//Support with GenAI
 function drawChart1(currentFilteredData, fullMasterData) {
     // Close the popup first so the chart returns to its card before it is redrawn
     if (typeof closeZoom === "function") closeZoom();

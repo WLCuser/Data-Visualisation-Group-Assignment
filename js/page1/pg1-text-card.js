@@ -1,3 +1,4 @@
+//Support with GenAI
 function drawChart5(data) {
     // Close the popup first so the content returns to its card before it is redrawn
     if (typeof closeZoom === "function") closeZoom();

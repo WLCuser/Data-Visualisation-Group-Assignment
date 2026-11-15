@@ -1,3 +1,4 @@
+//Support with GenAI
 let rawData = [];
 let activeFilters = {
     year: 'All',
