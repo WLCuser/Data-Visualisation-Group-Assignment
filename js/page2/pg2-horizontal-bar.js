@@ -14,7 +14,7 @@ d3.csv("data/state-and-territory-hospitalisation-injury-clean.csv", d => {
     createTooltip("#chart2");
     handleMouseEvents("#chart2");
 });
-
+// this part of the code has minimal use of AI usage
 // Wraps long tick labels on a LEFT axis, vertically centred on the tick
 const wrapLabels = (selection, maxWidth) => {
     selection.each(function () {
@@ -22,7 +22,8 @@ const wrapLabels = (selection, maxWidth) => {
         const x = text.attr("x");
         const words = text.text().split(/\s+/);
         text.text(null);
-
+   
+        // this part of the code has minimal use of AI usage
         // Work out the lines first by measuring with a temporary tspan
         const lines = [];
         let line = [];
@@ -39,6 +40,7 @@ const wrapLabels = (selection, maxWidth) => {
         lines.push(line.join(" "));
         probe.remove();
 
+        // this part of the code has minimal use of AI usage
         // Draw the lines, shifting the first one up so the block is centred
         lines.forEach((l, i) => {
             text.append("tspan")
@@ -51,6 +53,7 @@ const wrapLabels = (selection, maxWidth) => {
 
 const drawBarChart = data => {
 
+    // this part of the code has minimal use of AI usage
     // Margins for this chart only (does not change the shared margin)
     const margin = { top: 40, right: 30, bottom: 60, left: 100 };
     const innerWidth = width - margin.left - margin.right;
@@ -75,6 +78,7 @@ const drawBarChart = data => {
         d => d.state
     );
 
+    // this part of the code has minimal use of AI usage
     // Wide format: one row per road user, one column per state; largest total first
     const wideData = Array.from(nested, ([RoadUser, byState]) => {
         const row = { RoadUser };

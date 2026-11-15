@@ -15,6 +15,7 @@ d3.csv("data/state-and-territory-hospitalisation-injury-clean.csv", d => {
     handleMouseEvents("#chart5");
 });
 
+// this part of the code has minimal use of AI usage
 const drawDonutChart = data => {
     const radius = Math.min(width, height) / 2 - 20;
 
@@ -90,6 +91,7 @@ const drawDonutChart = data => {
         .attr("stroke", "white")
         .attr("stroke-width", 2);
 
+    // this part of the code has minimal use of AI usage
     // Inner ring labels: each counterparty's share of all cases (skip very small slices).
     // Percentages instead of names, because the counterparty names are too long for the ring.
     innerChart
@@ -160,7 +162,7 @@ const drawDonutChart = data => {
             .style("font-size", "14px")
             .text(counterparty);
     });
-
+    // this part of the code has minimal use of AI usage
     // Legend 2: state or territory (outer ring), top right
     const stateLegend = svg
         .append("g")

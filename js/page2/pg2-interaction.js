@@ -15,7 +15,8 @@ let stateFiltersBuilt = false;
 const buildStateFilters = (data) => {
     if (stateFiltersBuilt || !data.length || data[0].state === undefined) return;
     stateFiltersBuilt = true;
-
+ 
+    // This part of the code is GenAi Acknowledged
     // Layout and a plain look for the dropdowns. The :where() rules are only a fallback:
     // they have zero specificity, so any CSS the page already has for these wins.
     if (!document.querySelector("#auto-filter-style")) {
@@ -49,7 +50,8 @@ const buildStateFilters = (data) => {
             </select>
         </label>
     `;
-
+  
+    // this part of the code is AI acknowledged
     // Put the dropdowns just above the charts: find the element that holds both chart 1 and chart 2
     let anchor = document.querySelector("#chart1");
     const other = document.querySelector("#chart2");
@@ -93,6 +95,7 @@ const registerChart = (chartId, data, draw, filterYear = true) => {
     addZoomButton(chartId);
 };
 
+// this part of the code has minimal use of AI usage
 // Replaces your updateHistogram: filter each chart's data, remove its svg, draw it again
 const updateCharts = () => {
     updateYearTitle();
@@ -115,6 +118,7 @@ const updateCharts = () => {
 
 const populateFilters = (data) => {
 
+    // this part of the code has minimal use of AI usage
     // Replaces filters_screen: built from the data, plus an "all" option
     const filters_year = [
         { id: "all", label: "All", isActive: true },
@@ -129,7 +133,7 @@ const populateFilters = (data) => {
             .map(s => ({ id: s, label: s, isActive: false }))
     ];
 
-    // Your original button code, written once and used for both groups
+    
     const makeButtons = (containerId, filters, key) => {
 
         d3.select(containerId)

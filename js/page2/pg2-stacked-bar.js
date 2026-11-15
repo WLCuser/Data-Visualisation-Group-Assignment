@@ -16,6 +16,7 @@ d3.csv("data/state-and-territory-hospitalisation-injury-clean.csv", d => {
 });
 
 const drawStacked = data => {
+    // this part of the code has minimal use of AI usage
     // Stack order: first key is at the bottom (youngest at the bottom).
     // Listed by hand because sorting the labels alphabetically would put "8-16" last.
     const ageGroups = ["0-7", "8-16", "17-25", "26-39", "40-64", "65-74", "75+"];
@@ -36,6 +37,7 @@ const drawStacked = data => {
         d => d.ageGroup
     );
 
+    // this part of the code has minimal use of AI usage
     // Wide format: one row per state, one column per age group
     // Rows are sorted so the state with the most cases comes first
     const wideData = Array.from(nested, ([state, byAge]) => {

@@ -38,6 +38,7 @@ const drawBedDays = data => {
         .append("g")
         .attr("transform", "translate(30, 20)");
 
+    // this part of the code has minimal use of AI usage
     // Average bed days per hospitalisation = total bed days / total cases, per state
     const averages = d3.rollup(
         data,
