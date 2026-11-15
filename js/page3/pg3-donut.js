@@ -1,3 +1,4 @@
+//Load data
 d3.csv("data/First-Nations-hospitalised-injuries-clean.csv", d => {
     if (d["Breakdown type"] !== "counterparty") return null;
     return {
@@ -15,6 +16,7 @@ d3.csv("data/First-Nations-hospitalised-injuries-clean.csv", d => {
     handleMouseEvents("#chart5");
 });
 
+//claude.ai is used to support the work of this function
 const drawDonutChart = data => {
     const radius = Math.min(width, height) / 2 - 20;
     const statuses = ["First Nations people", "Non-Indigenous"];

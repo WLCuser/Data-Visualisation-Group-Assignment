@@ -1,3 +1,4 @@
+//Load data
 d3.csv("data/First-Nations-hospitalised-injuries-clean.csv", d => {
     if (d["Breakdown type"] !== "remoteness") return null;
     return {
@@ -15,6 +16,7 @@ d3.csv("data/First-Nations-hospitalised-injuries-clean.csv", d => {
     handleMouseEvents("#chart4");
 });
 
+//This function is support by claude.ai
 const drawStacked = data => {
     // Stack order: first key is at the bottom
     const statuses = ["First Nations people","Non-Indigenous"];

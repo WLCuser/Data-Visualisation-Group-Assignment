@@ -1,3 +1,4 @@
+//Load data
 d3.csv("data/First-Nations-hospitalised-injuries-clean.csv", d => {
     if (d["Breakdown type"] !== "age group") return null;
     return {
@@ -16,6 +17,7 @@ d3.csv("data/First-Nations-hospitalised-injuries-clean.csv", d => {
     handleMouseEvents("#chart3");
 });
 
+//This function is support by claude.ai
 const drawAgeChart = data => {
     const svg = d3.select("#chart3")
         .append("svg")

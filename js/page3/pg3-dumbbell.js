@@ -1,3 +1,4 @@
+//Load data
 d3.csv("data/First-Nations-hospitalised-injuries-clean.csv", d => {
     if (d["Breakdown type"] !== "road user") return null;
     return {
@@ -14,6 +15,8 @@ d3.csv("data/First-Nations-hospitalised-injuries-clean.csv", d => {
     createTooltip("#chart2");
     handleMouseEvents("#chart2");
 });
+
+//All of the function is support by claude.ai
 
 // Wraps long tick labels on a LEFT axis, vertically centred on the tick
 const wrapLabels = (selection, maxWidth) => {

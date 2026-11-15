@@ -1,3 +1,4 @@
+/* claude.ai is used to fix the style collide between different pages and also add responsive style for different screen size */
 body {
     margin: 0;
     background-color: aliceblue;
@@ -234,14 +235,6 @@ nav a.active {
         width: 96vw;
     }
 }
-
-/* =====================================================================
-   ONE-SCREEN MODE
-   On desktop-sized screens the page fills the window exactly: header,
-   nav and filters keep their natural (compact) height, and the chart
-   cards share the remaining space in 2 rows x 3 columns.
-   Smaller screens keep the normal scrolling layout above.
-   ===================================================================== */
 
 @media (min-width: 1101px) and (min-height: 600px) {
 

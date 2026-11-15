@@ -1,3 +1,4 @@
+//Load data
 d3.csv("data/First-Nations-hospitalised-injuries-clean.csv", d => {
     if (d["Breakdown type"] !== "age group") return null;
     return {
@@ -12,6 +13,7 @@ d3.csv("data/First-Nations-hospitalised-injuries-clean.csv", d => {
     registerChart("#chart6", data, drawText, false);
 });
 
+//This function is support by claude.ai
 const drawText = (data, selectedYear = "all") => {
     // Remove the previous box so only one exists
     d3.select("#chart6").selectAll(".text-summary").remove();

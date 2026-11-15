@@ -1,3 +1,5 @@
+//Interactive features of filter and tooltip is support by claude.ai
+
 // Charts that the filters control (each chart registers itself)
 const charts = [];
 

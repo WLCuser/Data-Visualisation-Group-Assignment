@@ -1,3 +1,5 @@
+//The zooming features is support by claude.ai
+
 // ---------- Enlarge-chart popup (shared by all charts) ----------
 let zoomOverlay = null;
 let zoomed = null;   // remembers which element to put back
