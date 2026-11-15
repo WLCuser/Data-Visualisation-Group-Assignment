@@ -15,6 +15,7 @@ d3.csv("data/state-and-territory-hospitalisation-injury-clean.csv", d => {
     handleMouseEvents("#chart3");
 });
 
+// This part of the code is GenAi acknowledged
 // Wraps a block of left-aligned SVG text onto several lines.
 // Set the text's x and y first; the first line sits at y, the rest follow below.
 const wrapText = (selection, maxWidth, lineHeight = 1.3) => {
@@ -62,7 +63,8 @@ const drawInfographic = data => {
 
     const fmt = d3.format(",");
     const pct = d3.format(".1%");
-
+     
+    // This part of the code is GenAi acknowledged
     // Total hospitalisations per state per sex (all years and half-years added together)
     const totals = d3.rollups(
         data,

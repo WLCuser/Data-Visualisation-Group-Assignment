@@ -41,6 +41,7 @@ Promise.all([
     d3.select("#chart1").append("p").text("The map could not be loaded. Check the console for details.");
 });
 
+// This part of the code is GenAi acknowledged
 // Prepares the shape file:
 // - keeps only the 8 states and territories
 // - drops far-away islands (Macquarie Island, Lord Howe Island and so on) and broken shapes
@@ -143,7 +144,8 @@ const drawMap = data => {
 
     const noData = "url(#no-data-hatch)";
     const fillFor = code => (totals.has(code) ? color(totals.get(code)) : noData);
-
+    
+     // This part of the code is GenAi acknowledged
     // What the data covers, e.g. "2011–2021", or just "2018" when one year is selected
     const [firstYear, lastYear] = d3.extent(data, d => d.year);
     const yearLabel = firstYear === undefined ? ""
